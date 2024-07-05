@@ -3,7 +3,7 @@ import { m } from "framer-motion";
 
 export const Sponsors = () => (
   <div className="py-14 text-center container max-w-screen-xl mx-auto">
-    <BlurIn component={m.h3} className="text-xl font-medium">
+    <BlurIn component={m.span} className="text-xl font-medium">
       Sponsors
     </BlurIn>
     <BlurIn
