@@ -15,14 +15,14 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params,
+  params: { locale = "zh-Hant-Tw" },
 }: {
   params: {
     locale: string;
   };
 }) {
   const t = await getTranslations({
-    locale: params.locale,
+    locale,
     namespace: "metadata",
   });
 
@@ -31,9 +31,7 @@ export async function generateMetadata({
     description: t("description"),
     alternates: {
       canonical: new URL(
-        `https://awscmd.tw/${
-          params.locale === "zh-Hant-Tw" ? "" : params.locale
-        }`,
+        `https://awscmd.tw/${locale === "zh-Hant-Tw" ? "" : locale}`,
       ),
     },
   } as Metadata;
