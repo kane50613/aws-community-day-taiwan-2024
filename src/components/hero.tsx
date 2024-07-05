@@ -61,6 +61,7 @@ const Gradient = () => {
     <div
       className={cn(
         "bg-gradient-to-b from-transparent to-transparent absolute top-0 left-0 w-full h-full opacity-50 via-70% transition-opacity",
+        // the opacity-0 class is used to prevent the Flash of Unstyled Content (FOUC)
         mounted
           ? theme === "dark"
             ? "via-[#613b95]"
