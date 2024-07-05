@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero.tsx";
 import { Images } from "@/components/images.tsx";
 import { Sponsors } from "@/components/sponsors.tsx";
 import { domAnimation, LazyMotion } from "framer-motion";
+import { Footer } from "@/components/footer.tsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <Images />
       <Sponsors />
+      <Footer />
     </LazyMotion>
   );
 }

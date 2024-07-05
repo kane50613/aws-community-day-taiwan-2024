@@ -38,7 +38,7 @@ export const Hero = () => {
       <BlurIn
         component={m.span}
         delay={0.15}
-        className="text-lg md:text-xl text-foreground/75 text-center mb-12"
+        className="text-lg md:text-xl text-foreground/75 text-center mb-12 text-balance"
       >
         Connect with AWS experts and peers. Learn, share, and innovate together.
       </BlurIn>
