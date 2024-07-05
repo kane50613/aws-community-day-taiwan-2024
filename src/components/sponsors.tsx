@@ -31,7 +31,7 @@ export const Sponsors = () => {
               width={720}
               height={480}
               key={i}
-              src={`https://picsum.photos/seed/sponsors-${i + 1}/720/480`}
+              src={`https://picsum.photos/seed/sponsors-${i + 1}/720/480.webp`}
               className="object-cover"
               alt="Sponsor"
             />
