@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/use-theme";
 import { MoonStar, Sun } from "lucide-react";

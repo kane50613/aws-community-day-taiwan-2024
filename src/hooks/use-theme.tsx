@@ -1,21 +1,24 @@
-import { useEffect } from "react";
-import { useLocalStorage } from "@uidotdev/usehooks";
+import { useCallback, useEffect, useSyncExternalStore } from "react";
+
+const useLocalStorageSubscribe = (callback: () => void) => {
+  window.addEventListener("theme-update", callback);
+  return () => window.removeEventListener("theme-update", callback);
+};
 
 export function useTheme() {
-  const [theme, setTheme] = useLocalStorage<"light" | "dark" | undefined>(
-    "theme-v2",
-    undefined,
+  const theme = useSyncExternalStore(
+    useLocalStorageSubscribe,
+    () => localStorage.getItem("theme-v3") ?? undefined,
+    () => undefined,
   );
 
+  const setTheme = useCallback((theme: "light" | "dark") => {
+    localStorage.setItem("theme-v3", theme);
+    window.dispatchEvent(new Event("theme-update"));
+  }, []);
+
   useEffect(() => {
-    if (!theme)
-      return setTheme(
-        "matchMedia" in window
-          ? window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light"
-          : "light",
-      );
+    if (!theme) return;
 
     if (theme === "light")
       document.querySelector("html")?.classList.remove("dark");

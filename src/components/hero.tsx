@@ -1,21 +1,25 @@
-import BlurIn from "@/components/magicui/blur-in.tsx";
-import { cn } from "@/lib/utils.ts";
-import AnimatedShinyText from "@/components/magicui/animated-shiny-text.tsx";
+"use client";
+
+import { BlurIn } from "@/components/magicui/blur-in";
+import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
 import { m } from "framer-motion";
-import { Button } from "@/components/ui/button.tsx";
-import { useTheme } from "@/hooks/use-theme.tsx";
-import { i18next } from "@/lib/i18n.ts";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "@/hooks/use-theme";
+import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text.tsx";
+import { useTranslations } from "next-intl";
 
 export const Hero = () => {
+  const t = useTranslations("hero");
   const [theme] = useTheme();
 
   return (
     <div className="container mt-16 md:mt-32 flex items-center justify-center flex-col">
       <div
         className={cn(
-          "bg-gradient-to-b from-transparent to-transparent absolute top-0 left-0 w-full h-full opacity-50 via-70%",
+          "bg-gradient-to-b from-transparent to-transparent absolute top-0 left-0 w-full h-full opacity-50 via-70% transition-opacity",
           theme === "dark" ? "via-[#613b95]" : "via-[#FF9900]",
+          !theme && "opacity-0",
         )}
       />
       <BlurIn delay={0.3}>
@@ -25,7 +29,7 @@ export const Hero = () => {
           )}
         >
           <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            🚀 {i18next.t("hero:banner")}
+            🚀 {t("banner")}
             <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
           </AnimatedShinyText>
         </div>
@@ -34,18 +38,18 @@ export const Hero = () => {
         component={m.h1}
         className="font-medium font-display text-center text-balance text-4xl tracking-[-0.02em] drop-shadow-sm md:text-7xl lg:text-8xl md:leading-[5rem] py-6"
       >
-        {i18next.t("hero:title")}
+        {t("title")}
       </BlurIn>
       <BlurIn
         component={m.span}
         delay={0.15}
         className="text-lg md:text-xl text-foreground/75 text-center mb-12 text-balance"
       >
-        {i18next.t("hero:description")}
+        {t("description")}
       </BlurIn>
       <BlurIn delay={0.45}>
         <Button className="rounded-full px-6">
-          {i18next.t("hero:register")}
+          {t("register")}
           <ArrowRightIcon className="w-4 ml-2" />
         </Button>
       </BlurIn>

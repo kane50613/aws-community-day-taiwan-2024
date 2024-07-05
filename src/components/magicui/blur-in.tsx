@@ -15,7 +15,8 @@ interface BlurIntProps extends PropsWithChildren {
   delay?: number;
   duration?: number;
 }
-const BlurIn = ({
+
+export const BlurIn = ({
   children,
   component,
   className,
@@ -39,5 +40,3 @@ const BlurIn = ({
     children,
   });
 };
-
-export default BlurIn;
