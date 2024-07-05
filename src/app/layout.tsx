@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 
 export default async function Layout({
   children,
-  params: { locale },
+  params: { locale = "zh-Hant-Tw" },
 }: {
   children: ReactNode;
   params: {

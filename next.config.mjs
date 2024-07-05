@@ -7,14 +7,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   poweredByHeader: false,
   output: "export",
-  async rewrites() {
-    return [
-      {
-        source: "/",
-        destination: "/zh-Hant-Tw/",
-      },
-    ];
-  },
 };
 
 export default withNextIntl(nextConfig);

@@ -3,6 +3,7 @@
 import { BlurIn } from "@/components/magicui/blur-in";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export const Sponsors = () => {
   const t = useTranslations("sponsors");
@@ -25,7 +26,10 @@ export const Sponsors = () => {
             delay={0.05 * i}
             className="rounded-md aspect-video overflow-hidden"
           >
-            <img
+            <Image
+              unoptimized
+              width={720}
+              height={480}
               key={i}
               src={`https://picsum.photos/seed/sponsors-${i + 1}/720/480`}
               className="object-cover"

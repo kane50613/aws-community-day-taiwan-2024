@@ -30,13 +30,16 @@ export const BlurIn = ({
   };
   const combinedVariants = variant || defaultVariants;
 
-  return createElement(component || m.div, {
-    initial: "hidden",
-    whileInView: "visible",
-    viewport: { once: true },
-    transition: { duration, delay },
-    variants: combinedVariants,
-    className,
+  return createElement(
+    component || m.div,
+    {
+      initial: "hidden",
+      whileInView: "visible",
+      viewport: { once: true },
+      transition: { duration, delay },
+      variants: combinedVariants,
+      className,
+    },
     children,
-  });
+  );
 };
