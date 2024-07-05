@@ -32,7 +32,7 @@ export const Sponsors = () => {
               height={480}
               key={i}
               loading="lazy"
-              src={`https://picsum.photos/seed/sponsors-${i + 1}/720/480.webp`}
+              src={`https://picsum.photos/seed/sponsors-${i + 1}/480/270.webp`}
               className="object-cover"
               alt="Sponsor"
             />
