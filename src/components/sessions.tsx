@@ -1,17 +1,18 @@
 import BlurIn from "@/components/magicui/blur-in.tsx";
 import { m } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
+import { i18next } from "@/lib/i18n.ts";
 
 export const Sessions = () => (
   <div className="py-14 text-center container max-w-screen-xl mx-auto relative">
     <BlurIn component={m.span} className="text-xl font-medium">
-      Sessions
+      {i18next.t("sessions:title")}
     </BlurIn>
     <BlurIn
       component={m.h2}
       className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 py-1.5"
     >
-      Learn from the best in the industry
+      {i18next.t("sessions:heading")}
     </BlurIn>
     <BlurIn delay={0.2}>
       <Tabs defaultValue="main" className="mb-12 sticky top-0">

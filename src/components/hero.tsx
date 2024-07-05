@@ -5,6 +5,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { m } from "framer-motion";
 import { Button } from "@/components/ui/button.tsx";
 import { useTheme } from "@/hooks/use-theme.tsx";
+import { i18next } from "@/lib/i18n.ts";
 
 export const Hero = () => {
   const [theme] = useTheme();
@@ -24,7 +25,7 @@ export const Hero = () => {
           )}
         >
           <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            🚀 Seeking sponsors for our event
+            🚀 {i18next.t("hero:banner")}
             <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
           </AnimatedShinyText>
         </div>
@@ -33,18 +34,18 @@ export const Hero = () => {
         component={m.h1}
         className="font-medium font-display text-center text-balance text-4xl tracking-[-0.02em] drop-shadow-sm md:text-7xl lg:text-8xl md:leading-[5rem] py-6"
       >
-        The Community Event for AWS Builders
+        {i18next.t("hero:title")}
       </BlurIn>
       <BlurIn
         component={m.span}
         delay={0.15}
         className="text-lg md:text-xl text-foreground/75 text-center mb-12 text-balance"
       >
-        Connect with AWS experts and peers. Learn, share, and innovate together.
+        {i18next.t("hero:description")}
       </BlurIn>
       <BlurIn delay={0.45}>
         <Button className="rounded-full px-6">
-          Register Now
+          {i18next.t("hero:register")}
           <ArrowRightIcon className="w-4 ml-2" />
         </Button>
       </BlurIn>
