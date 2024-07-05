@@ -1,33 +1,27 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/hooks/use-theme";
 import { MoonStar, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-  if (theme === "dark")
-    return (
-      <Button
-        variant="ghost"
-        size="sm"
-        aria-label="Light mode toggle"
-        onClick={() => setTheme("light")}
-      >
-        <MoonStar className="w-5" />
-      </Button>
-    );
+  useEffect(() => setMounted(true), []);
+
+  const Icon = mounted && theme === "dark" ? MoonStar : Sun;
 
   return (
     <Button
-      disabled={!theme}
+      disabled={!mounted || theme === undefined}
       variant="ghost"
       size="sm"
-      aria-label="Dark mode toggle"
-      onClick={() => setTheme("dark")}
+      aria-label="Theme toggle"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      <Sun className="w-5" />
+      <Icon className="w-5" />
     </Button>
   );
 };

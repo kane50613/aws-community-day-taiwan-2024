@@ -5,23 +5,17 @@ import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
 import { m } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/hooks/use-theme";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text.tsx";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
   const t = useTranslations("hero");
-  const [theme] = useTheme();
 
   return (
     <div className="container mt-16 md:mt-32 flex items-center justify-center flex-col">
-      <div
-        className={cn(
-          "bg-gradient-to-b from-transparent to-transparent absolute top-0 left-0 w-full h-full opacity-50 via-70% transition-opacity",
-          theme === "dark" ? "via-[#613b95]" : "via-[#FF9900]",
-          !theme && "opacity-0",
-        )}
-      />
+      <Gradient />
       <BlurIn delay={0.3}>
         <div
           className={cn(
@@ -54,5 +48,25 @@ export const Hero = () => {
         </Button>
       </BlurIn>
     </div>
+  );
+};
+
+const Gradient = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  return (
+    <div
+      className={cn(
+        "bg-gradient-to-b from-transparent to-transparent absolute top-0 left-0 w-full h-full opacity-50 via-70% transition-opacity",
+        mounted
+          ? theme === "dark"
+            ? "via-[#613b95]"
+            : "via-[#FF9900]"
+          : "opacity-0",
+      )}
+    />
   );
 };
