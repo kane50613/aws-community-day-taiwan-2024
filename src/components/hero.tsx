@@ -1,4 +1,3 @@
-import LinearGradient from "@/components/magicui/linear-gradient.tsx";
 import BlurIn from "@/components/magicui/blur-in.tsx";
 import { cn } from "@/lib/utils.ts";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text.tsx";
@@ -12,9 +11,11 @@ export const Hero = () => {
 
   return (
     <div className="container mt-16 md:mt-32 flex items-center justify-center flex-col">
-      <LinearGradient
-        to={theme === "dark" ? "#613b95" : "#FF9900"}
-        transitionPoint="75%"
+      <div
+        className={cn(
+          "bg-gradient-to-b from-transparent to-transparent absolute top-0 left-0 w-full h-full opacity-50 via-70%",
+          theme === "dark" ? "via-[#613b95]" : "via-[#FF9900]",
+        )}
       />
       <BlurIn delay={0.3}>
         <div
@@ -28,16 +29,18 @@ export const Hero = () => {
           </AnimatedShinyText>
         </div>
       </BlurIn>
-      <BlurIn className="font-medium font-display text-center text-balance text-4xl tracking-[-0.02em] drop-shadow-sm md:text-7xl lg:text-8xl md:leading-[5rem] py-6">
-        AWS Community Day Summer in Nangang!
+      <BlurIn
+        component={motion.h1}
+        className="font-medium font-display text-center text-balance text-4xl tracking-[-0.02em] drop-shadow-sm md:text-7xl lg:text-8xl md:leading-[5rem] py-6"
+      >
+        The Community Event for AWS Builders
       </BlurIn>
       <BlurIn
         component={motion.span}
         delay={0.15}
         className="text-lg md:text-xl text-foreground/75 text-center mb-12"
       >
-        Connect with AWS experts and peers. Learn, share, and innovate together
-        in Nangang this summer.
+        Connect with AWS experts and peers. Learn, share, and innovate together.
       </BlurIn>
       <BlurIn delay={0.45}>
         <Button className="rounded-full px-6">

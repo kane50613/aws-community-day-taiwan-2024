@@ -29,9 +29,10 @@ const BlurIn = ({
   };
   const combinedVariants = variant || defaultVariants;
 
-  return createElement(component || motion.h1, {
+  return createElement(component || motion.div, {
     initial: "hidden",
-    animate: "visible",
+    whileInView: "visible",
+    viewport: { once: true },
     transition: { duration, delay },
     variants: combinedVariants,
     className,
