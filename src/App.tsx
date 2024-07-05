@@ -5,6 +5,7 @@ import { Images } from "@/components/images.tsx";
 import { Sponsors } from "@/components/sponsors.tsx";
 import { domAnimation, LazyMotion } from "framer-motion";
 import { Footer } from "@/components/footer.tsx";
+import { Sessions } from "@/components/sessions.tsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       />
       <Hero />
       <Images />
+      <Sessions />
       <Sponsors />
       <Footer />
     </LazyMotion>

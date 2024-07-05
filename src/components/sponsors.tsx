@@ -8,7 +8,7 @@ export const Sponsors = () => (
     </BlurIn>
     <BlurIn
       component={m.h2}
-      className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-12"
+      className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-12 py-1.5"
     >
       We couldn't do it without you
     </BlurIn>
