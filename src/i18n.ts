@@ -50,12 +50,12 @@ const messages: Record<(typeof locales)[number], any> = {
     hero: {
       title: "AWS 開發者社群活動",
       banner: "我們正在尋找贊助商",
-      description: "與 AWS 專家和同行建立聯繫。一起學習、分享和創新。",
+      description: "與 AWS 專家和同行建立聯繫，一起學習、分享和創新。",
       register: "立即報名",
     },
     metadata: {
       title: "AWS Community Day Taiwan 2024",
-      description: "與 AWS 專家和同行建立聯繫。一起學習、分享和創新。",
+      description: "與 AWS 專家和同行建立聯繫，一起學習、分享和創新。",
     },
     header: {
       register: "我要報名",
