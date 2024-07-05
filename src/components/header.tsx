@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button.tsx";
 import { ThemeToggle } from "@/components/theme-toggle.tsx";
 import BlurIn from "@/components/magicui/blur-in.tsx";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export const Header = () => (
   <BlurIn
-    component={motion.header}
+    component={m.header}
     className="border-b bg-background sticky top-0 z-50"
     delay={0.3}
   >

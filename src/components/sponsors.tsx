@@ -1,13 +1,13 @@
 import BlurIn from "@/components/magicui/blur-in.tsx";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export const Sponsors = () => (
   <div className="py-14 text-center container max-w-screen-xl mx-auto">
-    <BlurIn component={motion.h3} className="text-xl font-medium">
+    <BlurIn component={m.h3} className="text-xl font-medium">
       Sponsors
     </BlurIn>
     <BlurIn
-      component={motion.h2}
+      component={m.h2}
       className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-12"
     >
       We couldn't do it without you

@@ -2,7 +2,7 @@ import BlurIn from "@/components/magicui/blur-in.tsx";
 import { cn } from "@/lib/utils.ts";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text.tsx";
 import { ArrowRightIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Button } from "@/components/ui/button.tsx";
 import { useTheme } from "@/hooks/use-theme.tsx";
 
@@ -30,13 +30,13 @@ export const Hero = () => {
         </div>
       </BlurIn>
       <BlurIn
-        component={motion.h1}
+        component={m.h1}
         className="font-medium font-display text-center text-balance text-4xl tracking-[-0.02em] drop-shadow-sm md:text-7xl lg:text-8xl md:leading-[5rem] py-6"
       >
         The Community Event for AWS Builders
       </BlurIn>
       <BlurIn
-        component={motion.span}
+        component={m.span}
         delay={0.15}
         className="text-lg md:text-xl text-foreground/75 text-center mb-12"
       >

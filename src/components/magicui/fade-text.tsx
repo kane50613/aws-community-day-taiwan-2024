@@ -1,7 +1,7 @@
 "use client";
 
 import { PropsWithChildren, useMemo } from "react";
-import { motion, Variants } from "framer-motion";
+import { m, Variants } from "framer-motion";
 
 type FadeTextProps = PropsWithChildren & {
   className?: string;
@@ -49,13 +49,13 @@ export function FadeText({
   }, [directionOffset, axis, framerProps]);
 
   return (
-    <motion.div
+    <m.div
       initial="hidden"
       animate="show"
       viewport={{ once: true }}
       variants={FADE_ANIMATION_VARIANTS}
     >
-      <motion.span className={className}>{children}</motion.span>
-    </motion.div>
+      <m.span className={className}>{children}</m.span>
+    </m.div>
   );
 }

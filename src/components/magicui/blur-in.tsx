@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, MotionProps } from "framer-motion";
+import { m, MotionProps } from "framer-motion";
 
 import { createElement, FC, PropsWithChildren } from "react";
 
@@ -29,7 +29,7 @@ const BlurIn = ({
   };
   const combinedVariants = variant || defaultVariants;
 
-  return createElement(component || motion.div, {
+  return createElement(component || m.div, {
     initial: "hidden",
     whileInView: "visible",
     viewport: { once: true },
