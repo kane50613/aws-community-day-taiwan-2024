@@ -31,6 +31,12 @@ export const Footer = () => {
         <div className="grid gap-2 text-sm text-primary/75">
           <p>{t("privacy")}</p>
           <p>{t("terms")}</p>
+          <a
+            target="_blank"
+            href="https://github.com/kane50613/aws-community-day-taiwan-2024"
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </footer>
