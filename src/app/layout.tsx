@@ -5,6 +5,10 @@ import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "next-themes";
 
+export const metadata = {
+  icons: new URL("https://yeecord.com/img/logo.png"),
+};
+
 export default async function Layout({
   children,
   params: { locale = "zh-Hant-Tw" },

@@ -17,7 +17,8 @@ export const Images = () => (
             width={720}
             height={480}
             key={i}
-            loading={i === 0 ? "eager" : "lazy"}
+            loading={i <= 1 ? "eager" : "lazy"}
+            priority={i <= 1}
             src={`https://picsum.photos/seed/images-${i + 1}/560/315.webp`}
             className="object-cover"
             alt="Image"
