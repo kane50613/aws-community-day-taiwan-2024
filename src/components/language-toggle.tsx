@@ -23,7 +23,7 @@ const languagePathMap: Record<(typeof locales)[number], string> = {
 export const LanguageToggle = () => (
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
-      <Button variant="ghost" size="sm" aria-label="Theme toggle">
+      <Button variant="ghost" size="sm" aria-label="Language toggle">
         <Languages className="w-4" />
       </Button>
     </DropdownMenuTrigger>
