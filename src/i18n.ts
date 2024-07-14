@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
 
 // Can be imported from a shared config
-export const locales = ["en", "zh-Hant-Tw"];
+export const locales = ["en", "zh-Hant-Tw", "jp"] as const;
 
 const messages: Record<(typeof locales)[number], any> = {
   en: {
@@ -85,13 +85,56 @@ const messages: Record<(typeof locales)[number], any> = {
       terms: "服務條款",
     },
   },
+  jp: {
+    hero: {
+      title: "AWS ビルダー向けのコミュニティイベント",
+      banner: "イベントのスポンサーを募集中",
+      description:
+        "AWS の専門家や仲間とつながりましょう。一緒に学び、共有し、革新しましょう。",
+      register: "今すぐ登録",
+    },
+    metadata: {
+      title: "AWS Community Day Taiwan 2024",
+      description:
+        "AWS の専門家や仲間とつながりましょう。一緒に学び、共有し、革新しましょう。",
+    },
+    header: {
+      register: "登録",
+    },
+    sponsors: {
+      title: "スポンサー",
+      heading: "あなたなしではできません",
+    },
+    sessions: {
+      title: "セッション",
+      heading: "業界のベストから学ぶ",
+      notAvailable: "現在セッションはありません。",
+      tabs: {
+        main: "メイン",
+        workshops: "ワークショップ",
+        lightning: "ライトニングトーク",
+      },
+    },
+    footer: {
+      sponsor: {
+        message: "スポンサーに興味がありますか？",
+        contact: "お問い合わせ",
+        pricing: "価格を問い合わせる",
+      },
+      privacy: "プライバシーポリシー",
+      terms: "利用規約",
+      copyright: "© 2024 AWS User Group、Amazon とは関係ありません",
+    },
+  },
 };
 
 export default getRequestConfig(async ({ locale }) => {
+  const message = messages[locale as keyof typeof messages];
+
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
+  if (!message) notFound();
 
   return {
-    messages: messages[locale],
+    messages: message,
   };
 });

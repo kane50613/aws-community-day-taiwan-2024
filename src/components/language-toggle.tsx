@@ -13,11 +13,13 @@ import { Languages } from "lucide-react";
 const languageMap: Record<(typeof locales)[number], string> = {
   en: "English",
   "zh-Hant-Tw": "繁體中文",
+  jp: "日本語",
 };
 
 const languagePathMap: Record<(typeof locales)[number], string> = {
   en: "/en",
   "zh-Hant-Tw": "/",
+  jp: "/jp",
 };
 
 export const LanguageToggle = () => (
