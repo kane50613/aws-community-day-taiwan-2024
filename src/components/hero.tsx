@@ -43,9 +43,11 @@ export const Hero = () => {
           {t("description")}
         </BlurIn>
         <BlurIn delay={0.45}>
-          <Button className="rounded-full px-6">
-            {t("register")}
-            <ArrowRightIcon className="w-4 ml-2" />
+          <Button className="rounded-full px-6" asChild>
+            <a href="https://tw.events.awsug.net/" target="_blank">
+              {t("register")}
+              <ArrowRightIcon className="w-4 ml-2" />
+            </a>
           </Button>
         </BlurIn>
       </div>

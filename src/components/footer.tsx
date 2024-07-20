@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export const Footer = () => {
   const t = useTranslations("footer");
@@ -12,15 +13,18 @@ export const Footer = () => {
           {t("sponsor.message")}
         </h3>
         <div className="flex-grow" />
-        <Button className="rounded-full text-md font-medium" size="lg">
-          {t("sponsor.contact")}
+        <Button className="rounded-full text-md font-medium" size="lg" asChild>
+          <a href="mailto:sponsor@awscmd.tw">{t("sponsor.contact")}</a>
         </Button>
         <Button
           className="rounded-full text-md font-medium"
           size="lg"
           variant="outline"
+          asChild
         >
-          {t("sponsor.pricing")}
+          <a href="https://awscmd.tw/sponsorship.pdf" target="_blank">
+            {t("sponsor.pricing")}
+          </a>
         </Button>
       </div>
       <div className="flex flex-col md:flex-row md:items-center justify-between border-t py-14 gap-8">

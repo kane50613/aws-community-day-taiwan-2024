@@ -39,7 +39,7 @@ const messages: Record<(typeof locales)[number], any> = {
       sponsor: {
         message: "Interested in sponsoring?",
         contact: "Contact Us",
-        pricing: "Inquire for pricing",
+        pricing: "View Pricing",
       },
       copyright: "© 2024 AWS User Group, not affiliated with Amazon",
       privacy: "Privacy Policy",
@@ -78,7 +78,7 @@ const messages: Record<(typeof locales)[number], any> = {
       sponsor: {
         message: "有興趣贊助嗎？",
         contact: "聯絡我們",
-        pricing: "詢問報價",
+        pricing: "查看報價方案",
       },
       copyright: "© 2024 AWS User Group 與 Amazon 無關",
       privacy: "隱私政策",
@@ -119,7 +119,7 @@ const messages: Record<(typeof locales)[number], any> = {
       sponsor: {
         message: "スポンサーに興味がありますか？",
         contact: "お問い合わせ",
-        pricing: "価格を問い合わせる",
+        pricing: "価格を見る",
       },
       privacy: "プライバシーポリシー",
       terms: "利用規約",

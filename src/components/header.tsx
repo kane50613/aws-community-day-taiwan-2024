@@ -21,8 +21,10 @@ export const Header = () => {
         <div className="flex-grow" />
         <LanguageToggle />
         <ThemeToggle />
-        <Button variant="secondary" className="ml-2">
-          {t("register")}
+        <Button variant="secondary" className="ml-2" asChild>
+          <a href="https://events.awscmd.tw/" target="_blank">
+            {t("register")}
+          </a>
         </Button>
       </div>
     </BlurIn>
