@@ -13,7 +13,9 @@ export const Footer = () => {
         </h3>
         <div className="flex-grow" />
         <Button className="rounded-full text-md font-medium" size="lg" asChild>
-          <a href="mailto:sponsor@awscmd.tw">{t("sponsor.contact")}</a>
+          <a href="https://personal-sponsorship.awscmd.tw" target="_blank">
+            個人贊助
+          </a>
         </Button>
         <Button
           className="rounded-full text-md font-medium"
@@ -22,7 +24,7 @@ export const Footer = () => {
           asChild
         >
           <a href="https://awscmd.tw/sponsorship.pdf" target="_blank">
-            {t("sponsor.pricing")}
+            企業贊助
           </a>
         </Button>
       </div>

@@ -2,7 +2,26 @@
 
 import { BlurIn } from "@/components/magicui/blur-in";
 import { m } from "framer-motion";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
+
+const sponsors = [
+  {
+    title: "KlickKlack",
+    image:
+      "https://www.kkco.com.tw/wp-content/uploads/2023/03/2023-KlickKlack-Logo.svg",
+  },
+  {
+    title: "中華電信",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Chunghwa_Telecom.svg/2880px-Chunghwa_Telecom.svg.png",
+  },
+  {
+    title: "104",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/104_logo.png/1200px-104_logo.png",
+  },
+];
 
 export const Sponsors = () => {
   const t = useTranslations("sponsors");
@@ -21,26 +40,27 @@ export const Sponsors = () => {
       >
         {t("heading")}
       </BlurIn>
-      {/*<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">*/}
-      {/*  {new Array(8).fill(0).map((_, i) => (*/}
-      {/*    <BlurIn*/}
-      {/*      key={i}*/}
-      {/*      delay={0.05 * i}*/}
-      {/*      className="rounded-md aspect-video overflow-hidden"*/}
-      {/*    >*/}
-      {/*      <Image*/}
-      {/*        unoptimized*/}
-      {/*        width={720}*/}
-      {/*        height={480}*/}
-      {/*        key={i}*/}
-      {/*        loading="lazy"*/}
-      {/*        src={`https://picsum.photos/seed/sponsors-${i + 1}/480/270.webp`}*/}
-      {/*        className="object-cover"*/}
-      {/*        alt="Sponsor"*/}
-      {/*      />*/}
-      {/*    </BlurIn>*/}
-      {/*  ))}*/}
-      {/*</div>*/}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 container">
+        {sponsors.map((sponsor, i) => (
+          <BlurIn
+            key={i}
+            delay={0.05 * i}
+            className="rounded-md aspect-video overflow-hidden flex items-center bg-white px-4"
+          >
+            <Image
+              unoptimized
+              width={720}
+              height={480}
+              key={i}
+              loading="lazy"
+              src={sponsor.image}
+              title={sponsor.title}
+              className="object-contain"
+              alt={sponsor.title}
+            />
+          </BlurIn>
+        ))}
+      </div>
     </div>
   );
 };
