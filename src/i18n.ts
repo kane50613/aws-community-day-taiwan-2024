@@ -25,6 +25,11 @@ const messages: Record<(typeof locales)[number], any> = {
       title: "Sessions",
       heading: "Learn from the best in the industry",
       notAvailable: "No sessions available yet.",
+      table: {
+        title: "Title",
+        time: "Time",
+        speakers: "Speakers",
+      },
       tabs: {
         main: "Main",
         workshops: "Workshops",
@@ -41,14 +46,14 @@ const messages: Record<(typeof locales)[number], any> = {
         contact: "Contact Us",
         pricing: "View Pricing",
       },
-      copyright: "© 2024 AWS User Group, not affiliated with Amazon",
+      copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
     },
   },
   "zh-Hant-Tw": {
     hero: {
-      title: "AWS 開發者社群活動",
+      title: "AWS Community Day Taiwan",
       banner: "我們正在尋找贊助商",
       description: "與 AWS 專家和同行建立聯繫，一起學習、分享和創新。",
       register: "立即報名",
@@ -68,6 +73,11 @@ const messages: Record<(typeof locales)[number], any> = {
       title: "議程",
       heading: "向業界最佳學習",
       notAvailable: "目前尚無議程。",
+      table: {
+        title: "標題",
+        time: "時間",
+        speakers: "講者",
+      },
       tabs: {
         main: "主軸議程",
         workshops: "工作坊",
@@ -78,9 +88,9 @@ const messages: Record<(typeof locales)[number], any> = {
       sponsor: {
         message: "有興趣贊助嗎？",
         contact: "聯絡我們",
-        pricing: "查看報價方案",
+        pricing: "查看贊助方案",
       },
-      copyright: "© 2024 AWS User Group 與 Amazon 無關",
+      copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
       privacy: "隱私政策",
       terms: "服務條款",
     },
@@ -109,6 +119,11 @@ const messages: Record<(typeof locales)[number], any> = {
       title: "セッション",
       heading: "業界のベストから学ぶ",
       notAvailable: "現在セッションはありません。",
+      table: {
+        title: "タイトル",
+        time: "時間",
+        speakers: "スピーカー",
+      },
       tabs: {
         main: "メイン",
         workshops: "ワークショップ",
@@ -123,7 +138,7 @@ const messages: Record<(typeof locales)[number], any> = {
       },
       privacy: "プライバシーポリシー",
       terms: "利用規約",
-      copyright: "© 2024 AWS User Group、Amazon とは関係ありません",
+      copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
     },
   },
 };

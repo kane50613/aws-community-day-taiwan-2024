@@ -32,13 +32,11 @@ export const Footer = () => {
           <p className="text-primary/75 text-sm">{t("copyright")}</p>
         </div>
         <div className="grid gap-2 text-sm text-primary/75">
-          <p>{t("privacy")}</p>
-          <p>{t("terms")}</p>
-          <a
-            target="_blank"
-            href="https://github.com/kane50613/aws-community-day-taiwan-2024"
-          >
-            GitHub
+          <a href="https://arcloud.com.tw/privacy" target="_blank">
+            {t("privacy")}
+          </a>
+          <a href="https://aws.amazon.com/codeofconduct/" target="_blank">
+            {t("terms")}
           </a>
         </div>
       </div>

@@ -25,16 +25,16 @@ type SessionType = {
 };
 
 const sessions: SessionType[] = [
-  {
-    title: "cdk-appsync-starter - An AWS AppSync Framework based on CDK",
-    speakers: [
-      {
-        name: "Titan Lin",
-      },
-    ],
-    time: "12:10 ~ 12:50",
-    type: "Track A",
-  },
+  // {
+  //   title: "cdk-appsync-starter - An AWS AppSync Framework based on CDK",
+  //   speakers: [
+  //     {
+  //       name: "Titan Lin",
+  //     },
+  //   ],
+  //   time: "12:10 ~ 12:50",
+  //   type: "Track A",
+  // },
   {
     title: "The Journey to localize AWS BuilderCards in Japan",
     speakers: [
@@ -143,9 +143,9 @@ export const Sessions = () => {
         <Table className="text-start">
           <TableHeader>
             <TableRow>
-              <TableHead>Time</TableHead>
-              <TableHead>Title</TableHead>
-              <TableHead>Speakers</TableHead>
+              <TableHead>{t("table.time")}</TableHead>
+              <TableHead>{t("table.title")}</TableHead>
+              <TableHead>{t("table.speakers")}</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

@@ -8,7 +8,10 @@ export const Sponsors = () => {
   const t = useTranslations("sponsors");
 
   return (
-    <div className="py-14 text-center container max-w-screen-xl mx-auto">
+    <div
+      className="py-14 text-center container max-w-screen-xl mx-auto"
+      id="sponsors"
+    >
       <BlurIn component={m.span} className="text-xl font-medium">
         {t("title")}
       </BlurIn>
