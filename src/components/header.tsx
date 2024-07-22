@@ -6,9 +6,13 @@ import { BlurIn } from "@/components/magicui/blur-in";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "@/components/language-toggle.tsx";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export const Header = () => {
   const t = useTranslations("header");
+
+  const { theme } = useTheme();
 
   return (
     <BlurIn
@@ -17,7 +21,14 @@ export const Header = () => {
       delay={0.3}
     >
       <div className="container flex items-center h-full py-2">
-        <p>AWS CMD</p>
+        <Image
+          src={theme === "dark" ? "/logo-black.svg" : "/logo-white.svg"}
+          alt="AWS Community Day 2024"
+          width={1068}
+          height={390}
+          unoptimized
+          className="h-8 md:h-12 w-auto"
+        />
         <div className="flex-grow" />
         <LanguageToggle />
         <ThemeToggle />

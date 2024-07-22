@@ -12,21 +12,27 @@ export const Footer = () => {
           {t("sponsor.message")}
         </h3>
         <div className="flex-grow" />
-        <Button className="rounded-full text-md font-medium" size="lg" asChild>
-          <a href="https://personal-sponsorship.awscmd.tw" target="_blank">
-            個人贊助
-          </a>
-        </Button>
-        <Button
-          className="rounded-full text-md font-medium"
-          size="lg"
-          variant="outline"
-          asChild
-        >
-          <a href="https://awscmd.tw/sponsorship.pdf" target="_blank">
-            企業贊助
-          </a>
-        </Button>
+        <div className="flex gap-4 flex-wrap">
+          <Button
+            className="rounded-full text-md font-medium"
+            size="lg"
+            asChild
+          >
+            <a href="https://personal-sponsorship.awscmd.tw" target="_blank">
+              個人贊助
+            </a>
+          </Button>
+          <Button
+            className="rounded-full text-md font-medium"
+            size="lg"
+            variant="outline"
+            asChild
+          >
+            <a href="https://awscmd.tw/sponsorship.pdf" target="_blank">
+              企業贊助
+            </a>
+          </Button>
+        </div>
       </div>
       <div className="flex flex-col md:flex-row md:items-center justify-between border-t py-14 gap-8">
         <div className="space-y-4">
