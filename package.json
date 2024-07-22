@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run lint"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
@@ -35,6 +39,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.4",
     "postcss": "^8.4.39",
+    "simple-git-hooks": "^2.11.1",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2"
   }
