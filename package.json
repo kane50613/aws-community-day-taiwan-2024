@@ -7,7 +7,8 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "lint": "next lint",
-    "postinstall": "simple-git-hooks"
+    "postinstall": "simple-git-hooks",
+    "deploy": "aws s3 sync out/ s3://awscmd.tw-migration"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run lint"
