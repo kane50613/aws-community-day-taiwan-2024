@@ -22,7 +22,10 @@ export const Header = () => {
         <LanguageToggle />
         <ThemeToggle />
         <Button variant="secondary" className="ml-2" asChild>
-          <a href="https://events.awscmd.tw/" target="_blank">
+          <a
+            href="https://tw.events.awsug.net/events/aws-community-day-2024"
+            target="_blank"
+          >
             {t("register")}
           </a>
         </Button>

@@ -3,7 +3,6 @@
 import { BlurIn } from "@/components/magicui/blur-in";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 export const Sponsors = () => {
   const t = useTranslations("sponsors");
@@ -19,26 +18,26 @@ export const Sponsors = () => {
       >
         {t("heading")}
       </BlurIn>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {new Array(8).fill(0).map((_, i) => (
-          <BlurIn
-            key={i}
-            delay={0.05 * i}
-            className="rounded-md aspect-video overflow-hidden"
-          >
-            <Image
-              unoptimized
-              width={720}
-              height={480}
-              key={i}
-              loading="lazy"
-              src={`https://picsum.photos/seed/sponsors-${i + 1}/480/270.webp`}
-              className="object-cover"
-              alt="Sponsor"
-            />
-          </BlurIn>
-        ))}
-      </div>
+      {/*<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">*/}
+      {/*  {new Array(8).fill(0).map((_, i) => (*/}
+      {/*    <BlurIn*/}
+      {/*      key={i}*/}
+      {/*      delay={0.05 * i}*/}
+      {/*      className="rounded-md aspect-video overflow-hidden"*/}
+      {/*    >*/}
+      {/*      <Image*/}
+      {/*        unoptimized*/}
+      {/*        width={720}*/}
+      {/*        height={480}*/}
+      {/*        key={i}*/}
+      {/*        loading="lazy"*/}
+      {/*        src={`https://picsum.photos/seed/sponsors-${i + 1}/480/270.webp`}*/}
+      {/*        className="object-cover"*/}
+      {/*        alt="Sponsor"*/}
+      {/*      />*/}
+      {/*    </BlurIn>*/}
+      {/*  ))}*/}
+      {/*</div>*/}
     </div>
   );
 };

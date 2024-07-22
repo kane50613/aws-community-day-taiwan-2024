@@ -3,10 +3,18 @@ import { FadeText } from "@/components/magicui/fade-text";
 import { BlurIn } from "@/components/magicui/blur-in";
 import Image from "next/image";
 
+const images = [
+  "/310453674_127783883379847_6065828499053974119_n.jpg",
+  "/309837317_127784460046456_1773663882536643444_n.jpg",
+  "/309980049_127784513379784_1225642072973866308_n.jpg",
+  "/311248617_127784140046488_84216263115604009_n.jpg",
+  "/311337622_127784010046501_3066697702341383213_n.jpg",
+];
+
 export const Images = () => (
   <FadeText direction="up">
     <Marquee className="mt-16 md:mt-32 w-full">
-      {new Array(5).fill(0).map((_, i) => (
+      {images.map((url, i) => (
         <BlurIn
           key={i}
           delay={i * 0.2}
@@ -19,7 +27,7 @@ export const Images = () => (
             key={i}
             loading={i <= 1 ? "eager" : "lazy"}
             priority={i <= 1}
-            src={`https://picsum.photos/seed/images-${i + 1}/560/315.webp`}
+            src={url}
             className="object-cover"
             alt="Image"
           />
