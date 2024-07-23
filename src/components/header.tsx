@@ -22,7 +22,7 @@ export const Header = () => {
     >
       <div className="container flex items-center h-full py-2">
         <Image
-          src={theme === "dark" ? "/logo-black.svg" : "/logo-white.svg"}
+          src={theme === "light" ? "/logo-black.svg" : "/logo-white.svg"}
           alt="AWS Community Day 2024"
           width={1068}
           height={390}

@@ -7,7 +7,7 @@ export const locales = ["en", "zh-Hant-Tw", "jp"] as const;
 const messages: Record<(typeof locales)[number], any> = {
   en: {
     hero: {
-      title: "The Community Event for AWS Builders",
+      title: "AWS Community Day Taiwan 2024",
       banner: "Seeking sponsors for our event",
       description:
         "Connect with AWS experts and peers. Learn, share, and innovate together.",
@@ -53,7 +53,7 @@ const messages: Record<(typeof locales)[number], any> = {
   },
   "zh-Hant-Tw": {
     hero: {
-      title: "AWS Community Day Taiwan",
+      title: "AWS Community Day Taiwan 2024",
       banner: "我們正在尋找贊助商",
       description: "與 AWS 專家和同行建立聯繫，一起學習、分享和創新。",
       register: "立即報名",
@@ -97,7 +97,7 @@ const messages: Record<(typeof locales)[number], any> = {
   },
   jp: {
     hero: {
-      title: "AWS ビルダー向けのコミュニティイベント",
+      title: "AWS Community Day Taiwan 2024",
       banner: "イベントのスポンサーを募集中",
       description:
         "AWS の専門家や仲間とつながりましょう。一緒に学び、共有し、革新しましょう。",
