@@ -8,11 +8,15 @@ import { useTranslations } from "next-intl";
 import { LanguageToggle } from "@/components/language-toggle.tsx";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
   const t = useTranslations("header");
 
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   return (
     <BlurIn
@@ -22,7 +26,9 @@ export const Header = () => {
     >
       <div className="container flex items-center h-full py-2">
         <Image
-          src={theme === "light" ? "/logo-black.svg" : "/logo-white.svg"}
+          src={
+            mounted && theme === "light" ? "/logo-black.svg" : "/logo-white.svg"
+          }
           alt="AWS Community Day 2024"
           width={1068}
           height={390}
