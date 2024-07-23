@@ -7,7 +7,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   poweredByHeader: false,
   output: "export",
-  trailingSlash: true,
 };
 
 export default withNextIntl(nextConfig);

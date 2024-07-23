@@ -71,7 +71,7 @@ const messages: Record<(typeof locales)[number], any> = {
     },
     sessions: {
       title: "議程",
-      heading: "向業界最佳學習",
+      heading: "更多議程，即將公開 - 敬請期待",
       notAvailable: "目前尚無議程。",
       table: {
         title: "標題",

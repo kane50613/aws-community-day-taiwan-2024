@@ -36,6 +36,16 @@ const sessions: SessionType[] = [
   //   type: "Track A",
   // },
   {
+    title: "精彩議程 即將公開",
+    speakers: [
+      {
+        name: "Coming soon...",
+      },
+    ],
+    time: "12:10 ~ 12:50",
+    type: "Track A",
+  },
+  {
     title: "The Journey to localize AWS BuilderCards in Japan",
     speakers: [
       {
@@ -66,6 +76,16 @@ const sessions: SessionType[] = [
     type: "Track A",
   },
   {
+    title: "Lighting Talks",
+    speakers: [
+      {
+        name: "",
+      },
+    ],
+    time: "16:30 ~ 17:00",
+    type: "Track A",
+  },
+  {
     title:
       "隕石級 AI 來惹，來用 AWS 打造可升空的知識火箭 👉 知識整理、超速學習、順便看懂 AI",
     speakers: [
@@ -74,6 +94,16 @@ const sessions: SessionType[] = [
       },
     ],
     time: "12:10 ~ 12:50",
+    type: "Track B",
+  },
+  {
+    title: "AWS Certification - 備考訓練營",
+    speakers: [
+      {
+        name: "Coming soon...",
+      },
+    ],
+    time: "13:50 ~ 14:30",
     type: "Track B",
   },
   {
