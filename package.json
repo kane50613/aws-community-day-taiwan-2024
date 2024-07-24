@@ -8,7 +8,7 @@
     "build": "next build",
     "lint": "next lint",
     "postinstall": "simple-git-hooks",
-    "deploy": "aws s3 sync out/ s3://awscmd.tw-migration"
+    "deploy": "bash ./deploy"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run lint"
@@ -25,6 +25,7 @@
     "next": "^14.2.4",
     "next-intl": "^3.15.3",
     "next-themes": "^0.3.0",
+    "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.3.0",

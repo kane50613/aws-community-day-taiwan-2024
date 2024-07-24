@@ -21,6 +21,11 @@ const sponsors = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/104_logo.png/1200px-104_logo.png",
   },
+  {
+    title: "JetBrains",
+    image:
+      "https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg",
+  },
 ];
 
 export const Sponsors = () => {
