@@ -8,43 +8,41 @@ const messages: Record<(typeof locales)[number], any> = {
   en: {
     hero: {
       title: "AWS Community Day Taiwan 2024",
-      banner: "Seeking sponsors for our event",
-      description:
-        "Connect with AWS experts and peers. Learn, share, and innovate together.",
+      banner: "We are looking for sponsors",
+      description: "Connect with AWS experts and peers to learn, share, and innovate together.",
       register: "Register Now",
+    },
+    metadata: {
+      title: "AWS Community Day Taiwan 2024",
+      description: "Connect with AWS experts and peers to learn, share, and innovate together.",
     },
     header: {
       register: "Register",
     },
-    metadata: {
-      title: "AWS Community Day Taiwan 2024",
-      description:
-        "Connect with AWS experts and peers. Learn, share, and innovate together.",
+    sponsors: {
+      title: "Sponsors",
+      heading: "We couldn't do it without you",
     },
     sessions: {
       title: "Sessions",
-      heading: "Learn from the best in the industry",
-      notAvailable: "No sessions available yet.",
+      heading: "More sessions coming soon - Stay tuned",
+      notAvailable: "No sessions available at the moment.",
       table: {
         title: "Title",
         time: "Time",
         speakers: "Speakers",
       },
       tabs: {
-        main: "Main",
+        main: "Main Track",
         workshops: "Workshops",
         lightning: "Lightning Talks",
       },
-    },
-    sponsors: {
-      title: "Sponsors",
-      heading: "We couldn't do it without you",
     },
     footer: {
       sponsor: {
         message: "Interested in sponsoring?",
         contact: "Contact Us",
-        pricing: "View Pricing",
+        pricing: "View Sponsorship Options",
       },
       copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
       privacy: "Privacy Policy",
@@ -81,7 +79,7 @@ const messages: Record<(typeof locales)[number], any> = {
       tabs: {
         main: "主軸議程",
         workshops: "工作坊",
-        lightning: "閃電聊",
+        lightning: "閃電講",
       },
     },
     footer: {
@@ -97,35 +95,33 @@ const messages: Record<(typeof locales)[number], any> = {
   },
   jp: {
     hero: {
-      title: "AWS Community Day Taiwan 2024",
-      banner: "イベントのスポンサーを募集中",
-      description:
-        "AWS の専門家や仲間とつながりましょう。一緒に学び、共有し、革新しましょう。",
+      title: "AWS コミュニティデー台湾 2024",
+      banner: "スポンサーを募集しています",
+      description: "AWS の専門家や仲間とつながり、共に学び、共有し、革新する。",
       register: "今すぐ登録",
     },
     metadata: {
-      title: "AWS Community Day Taiwan 2024",
-      description:
-        "AWS の専門家や仲間とつながりましょう。一緒に学び、共有し、革新しましょう。",
+      title: "AWS コミュニティデー台湾 2024",
+      description: "AWS の専門家や仲間とつながり、共に学び、共有し、革新する。",
     },
     header: {
-      register: "登録",
+      register: "登録する",
     },
     sponsors: {
       title: "スポンサー",
-      heading: "あなたなしではできません",
+      heading: "皆様のご協力なしでは実現できません",
     },
     sessions: {
       title: "セッション",
-      heading: "業界のベストから学ぶ",
-      notAvailable: "現在セッションはありません。",
+      heading: "より多くのセッションが近日公開予定 - お楽しみに",
+      notAvailable: "現在、利用可能なセッションはありません。",
       table: {
         title: "タイトル",
         time: "時間",
         speakers: "スピーカー",
       },
       tabs: {
-        main: "メイン",
+        main: "メイントラック",
         workshops: "ワークショップ",
         lightning: "ライトニングトーク",
       },
@@ -134,11 +130,11 @@ const messages: Record<(typeof locales)[number], any> = {
       sponsor: {
         message: "スポンサーに興味がありますか？",
         contact: "お問い合わせ",
-        pricing: "価格を見る",
+        pricing: "スポンサーシップオプションを見る",
       },
+      copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
       privacy: "プライバシーポリシー",
       terms: "利用規約",
-      copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
     },
   },
 };
