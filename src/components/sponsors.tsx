@@ -8,6 +8,11 @@ import Link from "next/dist/client/link";
 
 const sponsors = [
   {
+    title: "AWS",
+    image: "/AWS_logo_RGB.svg",
+    link: "https://aws.amazon.com/tw/",
+  },
+  {
     title: "KlickKlack",
     image:
       "https://www.kkco.com.tw/wp-content/uploads/2023/03/2023-KlickKlack-Logo.svg",
@@ -22,7 +27,7 @@ const sponsors = [
   {
     title: "JetBrains",
     image:
-        "https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg",
+      "https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg",
     link: "https://www.jetbrains.com/",
   },
   {
@@ -52,11 +57,12 @@ export const Sponsors = () => {
       </BlurIn>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 container">
         {sponsors.map((sponsor, i) => (
-          <BlurIn
-            key={i}
-            delay={0.05 * i}
-          >
-            <Link href={sponsor.link} rel="noreferrer noopener" className="rounded-md aspect-video overflow-hidden flex items-center bg-white px-4">
+          <BlurIn key={i} delay={0.05 * i}>
+            <Link
+              href={sponsor.link}
+              rel="noreferrer noopener"
+              className="rounded-md aspect-video overflow-hidden flex items-center bg-white px-4"
+            >
               <Image
                 unoptimized
                 width={720}
