@@ -9,12 +9,14 @@ const messages: Record<(typeof locales)[number], any> = {
     hero: {
       title: "AWS Community Day Taiwan 2024",
       banner: "We are looking for sponsors",
-      description: "Connect with AWS experts and peers to learn, share, and innovate together.",
+      description:
+        "Connect with AWS experts and peers to learn, share, and innovate together.",
       register: "Register Now",
     },
     metadata: {
       title: "AWS Community Day Taiwan 2024",
-      description: "Connect with AWS experts and peers to learn, share, and innovate together.",
+      description:
+        "Connect with AWS experts and peers to learn, share, and innovate together.",
     },
     header: {
       register: "Register",
@@ -45,6 +47,8 @@ const messages: Record<(typeof locales)[number], any> = {
         pricing: "View Sponsorship Options",
       },
       copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
+      translationDisclaimer:
+        "Disclaimer: this page is translated by Generative AI, and content may be inaccurate.",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
     },
@@ -89,6 +93,7 @@ const messages: Record<(typeof locales)[number], any> = {
         pricing: "查看贊助方案",
       },
       copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
+      translationDisclaimer: "",
       privacy: "隱私政策",
       terms: "服務條款",
     },
@@ -133,6 +138,8 @@ const messages: Record<(typeof locales)[number], any> = {
         pricing: "スポンサーシップオプションを見る",
       },
       copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
+      translationDisclaimer:
+        "免責事項：このページは生成AIによって翻訳されており、内容が不正確である可能性があります。",
       privacy: "プライバシーポリシー",
       terms: "利用規約",
     },
