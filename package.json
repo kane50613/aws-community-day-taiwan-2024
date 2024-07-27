@@ -8,7 +8,7 @@
     "build": "next build",
     "lint": "next lint",
     "postinstall": "simple-git-hooks",
-    "deploy": "bash ./deploy"
+    "deploy": "./deploy.sh"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run lint"
@@ -28,6 +28,7 @@
     "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },

@@ -4,7 +4,7 @@ import { BlurIn } from "@/components/magicui/blur-in";
 import { m } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import {
   Table,
   TableBody,
@@ -13,33 +13,38 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
+import Link from "next/dist/client/link";
+import Image from "next/image";
+import KosukeEnomoto from "../../public/Kosuke_Enomoto.jpg";
+import EricRuan from "../../public/eric-ruan.webp";
+import ShunYoshie from "../../public/ShunYoshie.jpeg";
+import SubinKim from "../../public/Subin_Kim.png";
+import ErnestChiang from "../../public/Ernest_Chiang.jpg";
+import TonyChung from "../../public/Tony_Chung.jpeg";
+import ShiunChiu from "../../public/Shiun_Chiu.jpg";
+import YunaLin from "../../public/Yuan_Lin.jpg";
+import RichieLiu from "../../public/Richie_Liu.jpg";
+import HarryChung from "../../public/Harry_Chung.jpg";
+import GordenWei from "../../public/Gorden_Wei.jpg";
 
 type SessionType = {
-  title: string;
+  title: ReactNode;
   speakers: {
     name: string;
     bio?: string;
+    link?: string;
+    image?: any;
   }[];
   time: string;
   type: "Track A" | "Track B";
 };
 
 const sessions: SessionType[] = [
-  // {
-  //   title: "cdk-appsync-starter - An AWS AppSync Framework based on CDK",
-  //   speakers: [
-  //     {
-  //       name: "Titan Lin",
-  //     },
-  //   ],
-  //   time: "12:10 ~ 12:50",
-  //   type: "Track A",
-  // },
   {
-    title: "精彩議程 即將公開",
+    title: "cdk-appsync-starter - An AWS AppSync Framework based on CDK",
     speakers: [
       {
-        name: "Coming soon...",
+        name: "Titan Lin",
       },
     ],
     time: "12:10 ~ 12:50",
@@ -50,6 +55,9 @@ const sessions: SessionType[] = [
     speakers: [
       {
         name: "Kosuke Enomoto",
+        bio: "AWS Community Builder / JAWS-UG Organizer",
+        link: "https://www.linkedin.com/in/kosuke-enomoto/",
+        image: KosukeEnomoto,
       },
     ],
     time: "13:00 ~ 13:40",
@@ -60,9 +68,28 @@ const sessions: SessionType[] = [
     speakers: [
       {
         name: "Eric Ruan",
+        bio: "AWS Community Builder",
+        link: "",
+        image: EricRuan,
       },
     ],
     time: "13:50 ~ 14:30",
+    type: "Track A",
+  },
+  {
+    title: (
+      <>
+        Dive deep into serverless system design: <br />
+        Event-driven, Decoupling, Real-world Practice
+      </>
+    ),
+    speakers: [
+      {
+        name: "Danny Chan, Kenny Chan",
+        bio: "AWS Community Builders",
+      },
+    ],
+    time: "15:40 ~ 16:20",
     type: "Track A",
   },
   {
@@ -70,6 +97,9 @@ const sessions: SessionType[] = [
     speakers: [
       {
         name: "Shun Yoshie",
+        bio: "AWS Security Hero",
+        link: "https://www.linkedin.com/in/shun-yoshie-6aba9970/",
+        image: ShunYoshie,
       },
     ],
     time: "15:40 ~ 16:20",
@@ -86,11 +116,30 @@ const sessions: SessionType[] = [
     type: "Track A",
   },
   {
-    title:
-      "隕石級 AI 來惹，來用 AWS 打造可升空的知識火箭 👉 知識整理、超速學習、順便看懂 AI",
+    title: "Slack Bot Gateway Development with AWS Lambda",
+    speakers: [
+      {
+        name: "Subin Kim",
+        image: SubinKim,
+        link: "https://github.com/sudosubin",
+      },
+    ],
+    time: "10:30 ~ 11:30",
+    type: "Track B",
+  },
+  {
+    title: (
+      <>
+        隕石級 AI 來惹，來用 AWS 打造可升空的知識火箭
+        <br /> 👉 知識整理、超速學習、順便看懂 AI
+      </>
+    ),
     speakers: [
       {
         name: "Ernest Chiang",
+        bio: "AWS Community Hero",
+        link: "https://www.ernestchiang.com/",
+        image: ErnestChiang,
       },
     ],
     time: "12:10 ~ 12:50",
@@ -112,6 +161,8 @@ const sessions: SessionType[] = [
       {
         name: "Tony Chung",
         bio: "CKmates銓鍇國際 / AWS Ambassador / AWS Community Builder",
+        image: TonyChung,
+        link: "https://www.linkedin.com/in/tonychungwenche/",
       },
     ],
     time: "13:50 ~ 14:30",
@@ -121,7 +172,28 @@ const sessions: SessionType[] = [
     title: "GenAI 生圖輕鬆上手 Demo",
     speakers: [
       {
-        name: "AWS Educate Student Ambassadors",
+        name: "Shiun Chiu",
+        bio: "AWS Educate Student Ambassador",
+        image: ShiunChiu,
+        link: "https://www.linkedin.com/in/shiunchiu/",
+      },
+      {
+        name: "Yuna Lin",
+        bio: "AWS Educate Student Ambassador",
+        image: YunaLin,
+        link: "https://www.linkedin.com/in/yuna-lin-851371286/",
+      },
+      {
+        name: "Richie Liu",
+        bio: "AWS Educate Student Ambassador",
+        image: RichieLiu,
+        link: "https://www.linkedin.com/in/rich-liu/",
+      },
+      {
+        name: "Harry Chung",
+        bio: "AWS Educate Student Ambassador",
+        image: HarryChung,
+        link: "https://www.linkedin.com/in/chih-han-chung-943950268/",
       },
     ],
     time: "14:50 ~ 15:30",
@@ -132,9 +204,27 @@ const sessions: SessionType[] = [
     speakers: [
       {
         name: "Gorden Wei",
+        bio: "iKala Cloud / AWS Community Builder",
+        link: "https://www.kmp.tw/",
+        image: GordenWei,
       },
     ],
     time: "15:40 ~ 16:20",
+    type: "Track B",
+  },
+  {
+    title: "Case Study for Repurposing Video Content With Generative AI",
+    speakers: [
+      {
+        name: "Sonu Kim",
+        bio: "Serverless Operations, Inc / AWS Community Builder / ServerlessJPCommunity / JAWS-UG / AWSKRUG",
+      },
+      {
+        name: "Kazuki Miura",
+        bio: "Hokkaido Television Broadcasting Co., Ltd. / AWS Community Hero/ JAWS-UG",
+      },
+    ],
+    time: "16:30 ~ 17:00",
     type: "Track B",
   },
 ];
@@ -195,12 +285,37 @@ export const Sessions = () => {
 
 const SessionRow = ({ session }: { session: SessionType }) => (
   <TableRow>
-    <TableCell className="text-base">{session.time}</TableCell>
+    <TableCell className="text-base text-nowrap">{session.time}</TableCell>
     <TableCell className="text-lg font-semibold">{session.title}</TableCell>
-    <TableCell className="space-y-1">
-      {session.speakers.map((x) => (
-        <p key={x.name}>{x.name}</p>
-      ))}
+    <TableCell>
+      <div className="space-y-1 flex flex-col gap-1">
+        {session.speakers.map((speaker, index) => (
+          <Link
+            href={speaker.link ?? "#"}
+            rel="noopener noreferrer"
+            key={"speaker-link-" + index}
+            target={speaker.link ? "_blank" : "_self"}
+            onClick={(e) => {
+              if (!speaker.link) return e.preventDefault();
+            }}
+          >
+            <div className="flex gap-4">
+              {speaker.image && (
+                <Image
+                  src={speaker.image}
+                  alt={speaker.name}
+                  unoptimized
+                  className="h-[3lh] object-contain w-auto rounded-full"
+                />
+              )}
+              <div className="flex flex-col justify-center">
+                <p key={index}>{speaker.name}</p>
+                <i key={"speaker-title-" + index}>{speaker.bio}</i>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </TableCell>
   </TableRow>
 );
