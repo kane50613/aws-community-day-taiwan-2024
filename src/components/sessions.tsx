@@ -220,12 +220,12 @@ const sessions: SessionType[] = [
     title: "Case Study for Repurposing Video Content With Generative AI",
     speakers: [
       {
-        name: "Sonu Kim",
-        bio: "Serverless Operations, Inc / AWS Community Builder / ServerlessJPCommunity / JAWS-UG / AWSKRUG",
+        name: "Kazuki Miura",
+        bio: "AWS Community Hero",
       },
       {
-        name: "Kazuki Miura",
-        bio: "Hokkaido Television Broadcasting Co., Ltd. / AWS Community Hero/ JAWS-UG",
+        name: "Sonu Kim",
+        bio: "AWS Community Builder",
       },
     ],
     time: "16:30 ~ 17:00",
@@ -290,7 +290,9 @@ export const Sessions = () => {
 const SessionRow = ({ session }: { session: SessionType }) => (
   <TableRow>
     <TableCell className="text-base md:text-nowrap">{session.time}</TableCell>
-    <TableCell className="text-lg font-semibold min-w-[240px]">{session.title}</TableCell>
+    <TableCell className="text-lg font-semibold min-w-[240px]">
+      {session.title}
+    </TableCell>
     <TableCell>
       <div className="space-y-1 flex flex-col gap-1 min-w-[240px]">
         {session.speakers.map((speaker, index) => (
@@ -314,7 +316,9 @@ const SessionRow = ({ session }: { session: SessionType }) => (
               )}
               <div className="flex flex-col justify-center">
                 <p key={index}>{speaker.name}</p>
-                <i key={"speaker-title-" + index} className="text-primary/75">{speaker.bio}</i>
+                <i key={"speaker-title-" + index} className="text-primary/75">
+                  {speaker.bio}
+                </i>
               </div>
             </div>
           </Link>
