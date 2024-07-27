@@ -289,10 +289,10 @@ export const Sessions = () => {
 
 const SessionRow = ({ session }: { session: SessionType }) => (
   <TableRow>
-    <TableCell className="text-base text-nowrap">{session.time}</TableCell>
-    <TableCell className="text-lg font-semibold">{session.title}</TableCell>
+    <TableCell className="text-base md:text-nowrap">{session.time}</TableCell>
+    <TableCell className="text-lg font-semibold min-w-[240px]">{session.title}</TableCell>
     <TableCell>
-      <div className="space-y-1 flex flex-col gap-1">
+      <div className="space-y-1 flex flex-col gap-1 min-w-[240px]">
         {session.speakers.map((speaker, index) => (
           <Link
             href={speaker.link ?? "#"}
