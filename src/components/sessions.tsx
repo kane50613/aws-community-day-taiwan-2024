@@ -85,8 +85,12 @@ const sessions: SessionType[] = [
     ),
     speakers: [
       {
-        name: "Danny Chan, Kenny Chan",
-        bio: "AWS Community Builders",
+        name: "Danny Chan",
+        bio: "AWS Community Builder",
+      },
+      {
+        name: "Kenny Chan",
+        bio: "AWS Community Builder",
       },
     ],
     time: "15:40 ~ 16:20",
@@ -310,7 +314,7 @@ const SessionRow = ({ session }: { session: SessionType }) => (
               )}
               <div className="flex flex-col justify-center">
                 <p key={index}>{speaker.name}</p>
-                <i key={"speaker-title-" + index}>{speaker.bio}</i>
+                <i key={"speaker-title-" + index} className="text-primary/75">{speaker.bio}</i>
               </div>
             </div>
           </Link>
