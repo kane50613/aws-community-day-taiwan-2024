@@ -9,6 +9,7 @@ import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text.tsx"
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export const Hero = () => {
   const t = useTranslations("hero");
@@ -46,9 +47,23 @@ export const Hero = () => {
         <BlurIn
           component={m.span}
           delay={0.15}
-          className="text-lg md:text-xl text-foreground/75 text-center mb-12 text-balance"
+          className="text-lg md:text-xl text-foreground/75 text-center mb-6 text-balance"
         >
           {t("description")}
+        </BlurIn>
+        <BlurIn
+          component={m.span}
+          delay={0.15}
+          className="text-lg md:text-xl text-foreground/90 text-center mb-12 text-balance"
+        >
+          2024 年 09 月 28 日{" "}
+          <Link
+            href="https://maps.app.goo.gl/n94UJm493sSvmcdT8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            瓶蓋工廠台北製造所 (南港車站旁)
+          </Link>
         </BlurIn>
         <BlurIn delay={0.45}>
           <Button className="rounded-full px-6" asChild>
