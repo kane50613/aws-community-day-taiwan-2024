@@ -75,6 +75,10 @@ const messages: Record<(typeof locales)[number], any> = {
       title: "議程",
       heading: "更多議程，即將公開 - 敬請期待",
       notAvailable: "目前尚無議程。",
+      keynoteAndPanel: "主題演講與焦點論壇",
+      comingSoon: "精彩議程 即將公開",
+      MandarinSess: "中文議程",
+      EnglishSess: "英語議程",
       table: {
         title: "標題",
         time: "時間",
