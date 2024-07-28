@@ -69,7 +69,7 @@ const sessions: SessionType[] = [
       {
         name: "Eric Ruan",
         bio: "AWS Community Builder",
-        link: "",
+        link: "https://www.linkedin.com/in/ycjuan/",
         image: EricRuan,
       },
     ],
