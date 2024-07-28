@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "next-themes";
 
 export const metadata = {
-  icons: new URL("https://yeecord.com/img/logo.png"),
+  icons: "/favicon.png",
 };
 
 export default async function Layout({
