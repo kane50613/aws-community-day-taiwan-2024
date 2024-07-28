@@ -1,4 +1,3 @@
-import Head from "next/head";
 import MainPage from "./[locale]/page.tsx";
 
 export { generateMetadata } from "./[locale]/page.tsx";
@@ -48,12 +47,10 @@ const eventSchema = {
 export default function Page() {
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+      />
       {/* hacky way to set the default locale */}
       <MainPage params={{ locale: "zh-Hant-Tw" }} />
     </>
