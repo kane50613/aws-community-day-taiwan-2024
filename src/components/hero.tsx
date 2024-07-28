@@ -56,13 +56,13 @@ export const Hero = () => {
           delay={0.15}
           className="text-lg md:text-xl text-foreground/90 text-center mb-12 text-balance"
         >
-          2024 年 09 月 28 日{" "}
+          {t("date")}{" "}
           <Link
             href="https://maps.app.goo.gl/n94UJm493sSvmcdT8"
             target="_blank"
             rel="noopener noreferrer"
           >
-            瓶蓋工廠台北製造所 (南港車站旁)
+            {t("location")}
           </Link>
         </BlurIn>
         <BlurIn delay={0.45}>

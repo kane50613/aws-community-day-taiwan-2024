@@ -12,6 +12,8 @@ const messages: Record<(typeof locales)[number], any> = {
       description:
         "Connect with AWS experts and peers to learn, share, and innovate together.",
       register: "Register Now",
+      date: "September 28, 2024 (Saturday)",
+      location: "POPOP Taipei (Next to Nangang Station)",
     },
     metadata: {
       title: "AWS Community Day Taiwan 2024",
@@ -29,6 +31,10 @@ const messages: Record<(typeof locales)[number], any> = {
       title: "Sessions",
       heading: "More sessions coming soon - Stay tuned",
       notAvailable: "No sessions available at the moment.",
+      keynoteAndPanel: "Keynote and Panel Discussion",
+      comingSoon: "Coming soon",
+      MandarinSess: "Mandarin Session",
+      EnglishSess: "English Session",
       table: {
         title: "Title",
         time: "Time",
@@ -44,7 +50,9 @@ const messages: Record<(typeof locales)[number], any> = {
       sponsor: {
         message: "Interested in sponsoring?",
         contact: "Contact Us",
-        pricing: "View Sponsorship Options",
+        pricing: "View Sponsorship Packages",
+        personal: "Personal",
+        enterprise: "Enterprise",
       },
       copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
       translationDisclaimer:
@@ -59,6 +67,8 @@ const messages: Record<(typeof locales)[number], any> = {
       banner: "我們正在尋找贊助商",
       description: "與 AWS 專家和同行建立聯繫，一起學習、分享和創新。",
       register: "立即報名",
+      date: "2024 年 09 月 28 日 (六)",
+      location: "瓶蓋工廠台北製造所 (南港車站旁)",
     },
     metadata: {
       title: "AWS Community Day Taiwan 2024",
@@ -95,6 +105,8 @@ const messages: Record<(typeof locales)[number], any> = {
         message: "有興趣贊助嗎？",
         contact: "聯絡我們",
         pricing: "查看贊助方案",
+        personal: "個人贊助",
+        enterprise: "企業贊助",
       },
       copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
       translationDisclaimer: "",
@@ -108,6 +120,8 @@ const messages: Record<(typeof locales)[number], any> = {
       banner: "スポンサーを募集しています",
       description: "AWS の専門家や仲間とつながり、共に学び、共有し、革新する。",
       register: "今すぐ登録",
+      date: "2024年9月28日（土）",
+      location: "ボトルキャップファクトリー台北（南港駅隣接）",
     },
     metadata: {
       title: "AWS コミュニティデー台湾 2024",
@@ -118,12 +132,16 @@ const messages: Record<(typeof locales)[number], any> = {
     },
     sponsors: {
       title: "スポンサー",
-      heading: "皆様のご協力なしでは実現できません",
+      heading: "皆様のご支援なしでは実現できません",
     },
     sessions: {
       title: "セッション",
-      heading: "より多くのセッションが近日公開予定 - お楽しみに",
+      heading: "さらなるセッションが近日公開 - お楽しみに",
       notAvailable: "現在、利用可能なセッションはありません。",
+      keynoteAndPanel: "基調講演とパネルディスカッション",
+      comingSoon: "エキサイティングなセッションが近日公開",
+      MandarinSess: "中国語セッション",
+      EnglishSess: "英語セッション",
       table: {
         title: "タイトル",
         time: "時間",
@@ -137,9 +155,11 @@ const messages: Record<(typeof locales)[number], any> = {
     },
     footer: {
       sponsor: {
-        message: "スポンサーに興味がありますか？",
+        message: "スポンサーにご興味がありますか？",
         contact: "お問い合わせ",
-        pricing: "スポンサーシップオプションを見る",
+        pricing: "スポンサーシッププランを見る",
+        personal: "個人協賛",
+        enterprise: "企業協賛",
       },
       copyright: "© 2024 AWS User Group Taiwan. All rights reserved.",
       translationDisclaimer:

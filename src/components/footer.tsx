@@ -19,7 +19,7 @@ export const Footer = () => {
             asChild
           >
             <a href="https://personal-sponsorship.awscmd.tw" target="_blank">
-              個人贊助
+              {t("sponsor.personal")}
             </a>
           </Button>
           <Button
@@ -28,8 +28,8 @@ export const Footer = () => {
             variant="outline"
             asChild
           >
-            <a href="https://awscmd.tw/sponsorship.pdf" target="_blank">
-              企業贊助
+            <a href="https://youtrack.arcloud.com.tw/form/ef9ab607-00ae-49fd-a120-6127218a11db" target="_blank">
+              {t("sponsor.enterprise")}
             </a>
           </Button>
         </div>
