@@ -26,6 +26,7 @@ import YunaLin from "../../public/Yuan_Lin.jpg";
 import RichieLiu from "../../public/Richie_Liu.jpg";
 import HarryChung from "../../public/Harry_Chung.jpg";
 import GordenWei from "../../public/Gorden_Wei.jpg";
+import SonuKim from "../../public/Sonu_Kim.jpg";
 
 type SessionType = {
   title: ReactNode;
@@ -58,6 +59,7 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Titan Lin",
+          bio: "Taiwan"
         },
       ],
       time: "12:10 ~ 12:50",
@@ -69,7 +71,7 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Kosuke Enomoto",
-          bio: "AWS Community Builder / JAWS-UG Organizer",
+          bio: "AWS Community Builder / JAWS-UG Organizer, Japan",
           link: "https://www.linkedin.com/in/kosuke-enomoto/",
           image: KosukeEnomoto,
         },
@@ -83,7 +85,7 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Eric Ruan",
-          bio: "AWS Community Builder",
+          bio: "AWS Community Builder, Taiwan",
           link: "https://www.linkedin.com/in/ycjuan/",
           image: EricRuan,
         },
@@ -102,11 +104,11 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Danny Chan",
-          bio: "AWS Community Builder",
+          bio: "AWS Community Builder, Hong Kong",
         },
         {
           name: "Kenny Chan",
-          bio: "AWS Community Builder",
+          bio: "AWS Community Builder, Hong Kong",
         },
       ],
       time: "15:40 ~ 16:20",
@@ -118,7 +120,7 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Shun Yoshie",
-          bio: "AWS Security Hero",
+          bio: "AWS Security Hero, Japan",
           link: "https://www.linkedin.com/in/shun-yoshie-6aba9970/",
           image: ShunYoshie,
         },
@@ -128,7 +130,7 @@ export const Sessions = () => {
       language: "English",
     },
     {
-      title: "Lighting Talks",
+      title: "Lightning Talks",
       speakers: [
         {
           name: "",
@@ -144,6 +146,7 @@ export const Sessions = () => {
           name: "Subin Kim",
           image: SubinKim,
           link: "https://github.com/sudosubin",
+          bio: "Korea"
         },
       ],
       time: "10:30 ~ 11:30",
@@ -160,7 +163,7 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Ernest Chiang",
-          bio: "AWS Community Hero",
+          bio: "AWS Community Hero, Taiwan",
           link: "https://www.ernestchiang.com/",
           image: ErnestChiang,
         },
@@ -185,7 +188,7 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Tony Chung",
-          bio: "CKmates銓鍇國際 / AWS Ambassador / AWS Community Builder",
+          bio: "CKmates銓鍇國際 / AWS Ambassador / AWS Community Builder, Taiwan",
           image: TonyChung,
           link: "https://www.linkedin.com/in/tonychungwenche/",
         },
@@ -199,25 +202,25 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Shiun Chiu",
-          bio: "AWS Educate Student Ambassador",
+          bio: "AWS Educate Student Ambassador, Taiwan",
           image: ShiunChiu,
           link: "https://www.linkedin.com/in/shiunchiu/",
         },
         {
           name: "Yuna Lin",
-          bio: "AWS Educate Student Ambassador",
+          bio: "AWS Educate Student Ambassador, Taiwan",
           image: YunaLin,
           link: "https://www.linkedin.com/in/yuna-lin-851371286/",
         },
         {
           name: "Richie Liu",
-          bio: "AWS Educate Student Ambassador",
+          bio: "AWS Educate Student Ambassador, Taiwan",
           image: RichieLiu,
           link: "https://www.linkedin.com/in/rich-liu/",
         },
         {
           name: "Harry Chung",
-          bio: "AWS Educate Student Ambassador",
+          bio: "AWS Educate Student Ambassador, Taiwan",
           image: HarryChung,
           link: "https://www.linkedin.com/in/chih-han-chung-943950268/",
         },
@@ -231,7 +234,7 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Gorden Wei",
-          bio: "iKala Cloud / AWS Community Builder",
+          bio: "iKala Cloud / AWS Community Builder, Taiwan",
           link: "https://www.kmp.tw/",
           image: GordenWei,
         },
@@ -245,11 +248,13 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Kazuki Miura",
-          bio: "AWS Community Hero",
+          bio: "Hokkaido Television Broadcasting Co., Ltd. / AWS Community Hero, Korea",
         },
         {
           name: "Sonu Kim",
-          bio: "AWS Community Builder",
+          bio: "Serverless Operations, Inc. / AWS Community Builder, Korea",
+          image: SonuKim,
+          link: "https://www.linkedin.com/in/sonukim/"
         },
       ],
       time: "16:30 ~ 17:00",

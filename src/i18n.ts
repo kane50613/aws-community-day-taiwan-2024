@@ -26,6 +26,10 @@ const messages: Record<(typeof locales)[number], any> = {
     sponsors: {
       title: "Sponsors",
       heading: "We couldn't do it without you",
+      titanium: "Titanium",
+      diamond: "Diamond",
+      gold: "Gold",
+      silver: "Silver",
     },
     sessions: {
       title: "Sessions",
@@ -80,6 +84,10 @@ const messages: Record<(typeof locales)[number], any> = {
     sponsors: {
       title: "贊助商",
       heading: "沒有您，我們無法做到",
+      titanium: "鈦金級",
+      diamond: "鑽石級",
+      gold: "黃金級",
+      silver: "白銀級",
     },
     sessions: {
       title: "議程",
@@ -133,6 +141,10 @@ const messages: Record<(typeof locales)[number], any> = {
     sponsors: {
       title: "スポンサー",
       heading: "皆様のご支援なしでは実現できません",
+      titanium: "チタニウム",
+      diamond: "ダイヤモンド",
+      gold: "ゴールド",
+      silver: "シルバー",
     },
     sessions: {
       title: "セッション",
