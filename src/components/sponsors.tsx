@@ -51,7 +51,7 @@ const sponsors = {
       title: "F5",
       image: "/f5-logo-rgb.svg",
       link: "https://www.f5.com/",
-      style: "max-h-[80%]",
+      style: "h-[80%]",
     },
     {
       title: "1111人力銀行",

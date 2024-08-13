@@ -27,6 +27,8 @@ import RichieLiu from "../../public/Richie_Liu.jpg";
 import HarryChung from "../../public/Harry_Chung.jpg";
 import GordenWei from "../../public/Gorden_Wei.jpg";
 import SonuKim from "../../public/Sonu_Kim.jpg";
+import LisaJia from "../../public/Lisa_Jia.jpg";
+import DannyChan from "../../public/Danny_Chan.jpg";
 
 type SessionType = {
   title: ReactNode;
@@ -59,7 +61,7 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Titan Lin",
-          bio: "Taiwan"
+          bio: "Taiwan",
         },
       ],
       time: "12:10 ~ 12:50",
@@ -105,10 +107,13 @@ export const Sessions = () => {
         {
           name: "Danny Chan",
           bio: "AWS Community Builder, Hong Kong",
+          link: "https://www.linkedin.com/in/danny-code/",
+          image: DannyChan,
         },
         {
-          name: "Kenny Chan",
-          bio: "AWS Community Builder, Hong Kong",
+          name: "Lisa Jia",
+          bio: "Entrepreneur, Hong Kong",
+          image: LisaJia,
         },
       ],
       time: "15:40 ~ 16:20",
@@ -146,7 +151,7 @@ export const Sessions = () => {
           name: "Subin Kim",
           image: SubinKim,
           link: "https://github.com/sudosubin",
-          bio: "Korea"
+          bio: "Korea",
         },
       ],
       time: "10:30 ~ 11:30",
@@ -254,7 +259,7 @@ export const Sessions = () => {
           name: "Sonu Kim",
           bio: "Serverless Operations, Inc. / AWS Community Builder, Korea",
           image: SonuKim,
-          link: "https://www.linkedin.com/in/sonukim/"
+          link: "https://www.linkedin.com/in/sonukim/",
         },
       ],
       time: "16:30 ~ 17:00",
