@@ -29,6 +29,7 @@ import GordenWei from "../../public/Gorden_Wei.jpg";
 import SonuKim from "../../public/Sonu_Kim.jpg";
 import LisaJia from "../../public/Lisa_Jia.jpg";
 import DannyChan from "../../public/Danny_Chan.jpg";
+import KazukiMiura from "../../public/Kazuki_Miura.png";
 
 type SessionType = {
   title: ReactNode;
@@ -253,11 +254,12 @@ export const Sessions = () => {
       speakers: [
         {
           name: "Kazuki Miura",
-          bio: "Hokkaido Television Broadcasting Co., Ltd. / AWS Community Hero, Korea",
+          bio: "Hokkaido Television Broadcasting Co., Ltd. / AWS Community Hero, Japan",
+          image: KazukiMiura,
         },
         {
           name: "Sonu Kim",
-          bio: "Serverless Operations, Inc. / AWS Community Builder, Korea",
+          bio: "Serverless Operations, Inc. / AWS Community Builder, Japan / Korea",
           image: SonuKim,
           link: "https://www.linkedin.com/in/sonukim/",
         },

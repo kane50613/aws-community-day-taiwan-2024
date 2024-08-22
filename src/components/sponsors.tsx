@@ -66,6 +66,11 @@ const sponsors = {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/104_logo.png/1200px-104_logo.png",
       link: "https://www.104.com.tw/",
     },
+    {
+      title: "DELI 得力光電",
+      image: "/Deli.png",
+      link: "https://www.deli.com.tw/",
+    }
   ],
 };
 
