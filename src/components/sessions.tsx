@@ -333,17 +333,9 @@ const SessionRow = ({ session }: { session: SessionType }) => {
       </TableCell>
       <TableCell>
         <div className="space-y-1 flex flex-col gap-1 min-w-[240px]">
-          {session.speakers.map((speaker, index) => (
-            <Link
-              href={speaker.link ?? "#"}
-              rel="noopener noreferrer"
-              key={"speaker-link-" + index}
-              target={speaker.link ? "_blank" : "_self"}
-              onClick={(e) => {
-                if (!speaker.link) return e.preventDefault();
-              }}
-            >
-              <div className="flex gap-4">
+          {session.speakers.map((speaker, index) => {
+            const speakerComp = (
+              <div className="flex gap-4" key={`speaker-image-${index}`}>
                 {speaker.image && (
                   <Image
                     src={speaker.image}
@@ -359,8 +351,23 @@ const SessionRow = ({ session }: { session: SessionType }) => {
                   </i>
                 </div>
               </div>
-            </Link>
-          ))}
+            );
+
+            if (speaker.link)
+              return (
+                <Link
+                  href={speaker.link}
+                  rel="noopener noreferrer"
+                  key={`speaker-${index}`}
+                  target="_blank"
+                  aria-label={speaker.name}
+                >
+                  {speakerComp}
+                </Link>
+              );
+
+            return speakerComp;
+          })}
         </div>
       </TableCell>
     </TableRow>
