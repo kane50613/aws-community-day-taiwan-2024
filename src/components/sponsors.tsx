@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { cn } from "@/lib/utils.ts";
 import React from "react";
+import { SectionTitle } from "@/components/section-title.tsx";
+import { SectionHeading } from "@/components/section-heading.tsx";
 
 export interface Sponsor {
   title: string;
@@ -79,15 +81,8 @@ export const Sponsors = () => {
 
   return (
     <div className="py-14 text-center container mx-auto" id="sponsors">
-      <BlurIn component={m.span} className="text-xl font-medium">
-        {t("title")}
-      </BlurIn>
-      <BlurIn
-        component={m.h2}
-        className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-12 py-1.5"
-      >
-        {t("heading")}
-      </BlurIn>
+      <SectionTitle>{t("title")}</SectionTitle>
+      <SectionHeading>{t("heading")}</SectionHeading>
       {Object.entries(sponsors).map(([tier, sponsorList], tierIndex) =>
         sponsorList.length ? (
           <SponsorTier key={tierIndex} tier={tier} sponsorList={sponsorList} />

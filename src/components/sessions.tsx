@@ -1,7 +1,6 @@
 "use client";
 
 import { BlurIn } from "@/components/magicui/blur-in";
-import { m } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
 import React, { ReactNode, useState } from "react";
@@ -28,6 +27,8 @@ import DannyChan from "../../public/Danny_Chan.jpg";
 import KazukiMiura from "../../public/Kazuki_Miura.png";
 import MichaelHuang from "../../public/Michael_Huang.jpg";
 import EdwardOo from "../../public/EdwardOo.jpg";
+import { SectionTitle } from "@/components/section-title.tsx";
+import { SectionHeading } from "@/components/section-heading.tsx";
 
 type SessionType = {
   title: ReactNode;
@@ -267,15 +268,8 @@ export const Sessions = () => {
   const filteredSessions = sessions.filter((x) => x.type === selected);
   return (
     <div className="py-14 text-center container mx-auto relative">
-      <BlurIn component={m.span} className="text-xl font-medium">
-        {t("title")}
-      </BlurIn>
-      <BlurIn
-        component={m.h2}
-        className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 py-1.5"
-      >
-        {t("heading")}
-      </BlurIn>
+      <SectionTitle>{t("title")}</SectionTitle>
+      <SectionHeading>{t("heading")}</SectionHeading>
       <BlurIn delay={0.2}>
         <Tabs
           value={selected}
