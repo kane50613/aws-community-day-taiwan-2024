@@ -5,14 +5,13 @@ import { useEffect, useState } from "react";
 export function useMountedTheme() {
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
+  useEffect(() => setMounted(true), []);
 
-    return () => setMounted(false);
-  }, []);
+  const theme = useTheme();
 
   return {
     mounted,
-    ...useTheme(),
+    theme: theme.resolvedTheme,
+    setTheme: theme.setTheme,
   };
 }
