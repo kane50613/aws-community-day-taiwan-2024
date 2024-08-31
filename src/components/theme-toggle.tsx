@@ -2,14 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { MoonStar, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useMountedTheme } from "@/lib/use-mounted-theme.ts";
 
 export const ThemeToggle = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
+  const { theme, setTheme, mounted } = useMountedTheme();
 
   const Icon = mounted && theme === "dark" ? MoonStar : Sun;
 

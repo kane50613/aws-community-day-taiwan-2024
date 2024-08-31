@@ -50,6 +50,9 @@ const messages: Record<(typeof locales)[number], any> = {
         lightning: "Lightning Talks",
       },
     },
+    workshop: {
+      title: "Workshops",
+    },
     footer: {
       sponsor: {
         message: "Interested in sponsoring?",
@@ -108,6 +111,9 @@ const messages: Record<(typeof locales)[number], any> = {
         lightning: "閃電講",
       },
     },
+    workshop: {
+      title: "工作坊",
+    },
     footer: {
       sponsor: {
         message: "有興趣贊助嗎？",
@@ -164,6 +170,9 @@ const messages: Record<(typeof locales)[number], any> = {
         workshops: "ワークショップ",
         lightning: "ライトニングトーク",
       },
+    },
+    workshop: {
+      title: "ワークショップ",
     },
     footer: {
       sponsor: {

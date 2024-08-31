@@ -1,4 +1,4 @@
-export default {
+const config = {
   darkMode: ["class"],
   content: ["./src/**/*.{ts,tsx,css}", "./index.html"],
   prefix: "",
@@ -86,5 +86,7 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: ["tailwindcss-animate"],
 };
+
+export default config;

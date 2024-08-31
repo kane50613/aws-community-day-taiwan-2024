@@ -7,9 +7,8 @@ import { m } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text.tsx";
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useMountedTheme } from "@/lib/use-mounted-theme.ts";
 
 export const Hero = () => {
   const t = useTranslations("hero");
@@ -82,10 +81,7 @@ export const Hero = () => {
 };
 
 const Gradient = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
+  const { theme, mounted } = useMountedTheme();
 
   return (
     <div

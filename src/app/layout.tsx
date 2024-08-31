@@ -1,4 +1,3 @@
-import { themeScript } from "@/lib/theme-script.ts";
 import { ReactNode } from "react";
 import "@/index.css";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
@@ -23,14 +22,7 @@ export default async function Layout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: themeScript,
-          }}
-        />
-      </head>
+    <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

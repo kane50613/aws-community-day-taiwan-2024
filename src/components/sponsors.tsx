@@ -14,11 +14,11 @@ export interface Sponsor {
   style?: string;
 }
 
-export interface SponsorTiers {
-  [key: string]: Sponsor[];
-}
+type Tiers = "titanium" | "diamond" | "gold" | "silver";
 
-const sponsors = {
+const sponsors: {
+  [key in Tiers]: Sponsor[];
+} = {
   titanium: [
     {
       title: "AWS",
@@ -57,7 +57,7 @@ const sponsors = {
       title: "1111人力銀行",
       image: "/1111.png",
       link: "https://www.1111.com.tw/",
-    }
+    },
   ],
   silver: [
     {
@@ -70,7 +70,7 @@ const sponsors = {
       title: "DELI 得力光電",
       image: "/Deli.png",
       link: "https://www.deli.com.tw/",
-    }
+    },
   ],
 };
 
@@ -78,10 +78,7 @@ export const Sponsors = () => {
   const t = useTranslations("sponsors");
 
   return (
-    <div
-      className="py-14 text-center container max-w-screen-xl mx-auto"
-      id="sponsors"
-    >
+    <div className="py-14 text-center container mx-auto" id="sponsors">
       <BlurIn component={m.span} className="text-xl font-medium">
         {t("title")}
       </BlurIn>
@@ -109,7 +106,7 @@ export const SponsorImage: React.FC<SponsorImageProps> = ({ sponsor }) => (
     href={sponsor.link}
     target="_blank"
     rel="noreferrer noopener"
-    className="rounded-md aspect-video overflow-hidden flex items-center bg-white px-4"
+    className="rounded-md aspect-[18/9] overflow-hidden flex items-center bg-white px-4"
   >
     <Image
       unoptimized
@@ -139,7 +136,7 @@ export const SponsorTier: React.FC<SponsorTierProps> = ({
     <div>
       <BlurIn
         component={m.h3}
-        className="text-2xl font-display font-bold mt-10 mb-2 py-1.5 text-left container"
+        className="text-2xl font-display font-bold mt-10 mb-2 py-1.5 text-left"
       >
         {t(tier)}
       </BlurIn>

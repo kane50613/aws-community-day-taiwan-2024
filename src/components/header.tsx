@@ -7,16 +7,12 @@ import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "@/components/language-toggle.tsx";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useMountedTheme } from "@/lib/use-mounted-theme.ts";
 
 export const Header = () => {
   const t = useTranslations("header");
 
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  const { theme, mounted } = useMountedTheme();
 
   return (
     <BlurIn
