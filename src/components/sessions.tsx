@@ -27,6 +27,7 @@ import LisaJia from "../../public/Lisa_Jia.jpg";
 import DannyChan from "../../public/Danny_Chan.jpg";
 import KazukiMiura from "../../public/Kazuki_Miura.png";
 import MichaelHuang from "../../public/Michael_Huang.jpg";
+import EdwardOo from "../../public/EdwardOo.jpg";
 
 type SessionType = {
   title: ReactNode;
@@ -152,9 +153,23 @@ export const Sessions = () => {
           bio: "Korea",
         },
       ],
-      time: "10:30 ~ 11:30",
+      time: "10:30 ~ 11:00",
       type: "Track B",
       language: "English",
+    },
+    {
+      title: "當遇到 IT 不管 Cloud 賬號該怎麼辦",
+      speakers: [
+        {
+          name: "Edward Oo",
+          image: EdwardOo,
+          link: "https://www.linkedin.com/in/ookangzheng/",
+          bio: "Taiwan",
+        },
+      ],
+      time: "11:00 ~ 12:05",
+      type: "Track B",
+      language: "Mandarin",
     },
     {
       title: (
