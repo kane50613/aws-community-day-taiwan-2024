@@ -182,7 +182,7 @@ export const Sessions = () => {
           name: "Coming soon...",
         },
       ],
-      time: "13:50 ~ 14:30",
+      time: "13:00 ~ 13:40",
       type: "Track B",
       language: "Mandarin",
     },
