@@ -28,7 +28,10 @@ export const Footer = () => {
             variant="outline"
             asChild
           >
-            <a href="https://youtrack.arcloud.com.tw/form/ef9ab607-00ae-49fd-a120-6127218a11db" target="_blank">
+            <a
+              href="https://youtrack.arcloud.com.tw/form/ef9ab607-00ae-49fd-a120-6127218a11db"
+              target="_blank"
+            >
               {t("sponsor.enterprise")}
             </a>
           </Button>

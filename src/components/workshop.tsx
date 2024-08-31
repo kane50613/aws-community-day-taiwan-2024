@@ -10,7 +10,7 @@ export const Workshop = () => {
   const t = useTranslations("workshop");
 
   return (
-    <div className="py-14 text-start container mx-auto relative rounded-md bg-primary-foreground text-primary">
+    <div className="py-14 md:text-start container mx-auto relative md:rounded-md bg-primary-foreground text-primary">
       <SectionTitle className="md:text-lg">{t("title")}</SectionTitle>
       <BlurIn
         component={m.h3}
