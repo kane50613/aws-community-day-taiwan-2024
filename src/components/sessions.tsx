@@ -14,22 +14,19 @@ import {
   TableRow,
 } from "./ui/table";
 import Link from "next/dist/client/link";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import KosukeEnomoto from "../../public/Kosuke_Enomoto.jpg";
 import EricRuan from "../../public/eric-ruan.webp";
 import ShunYoshie from "../../public/ShunYoshie.jpeg";
 import SubinKim from "../../public/Subin_Kim.png";
 import ErnestChiang from "../../public/Ernest_Chiang.jpg";
 import TonyChung from "../../public/Tony_Chung.jpeg";
-import ShiunChiu from "../../public/Shiun_Chiu.jpg";
-import YunaLin from "../../public/Yuan_Lin.jpg";
-import RichieLiu from "../../public/Richie_Liu.jpg";
-import HarryChung from "../../public/Harry_Chung.jpg";
 import GordenWei from "../../public/Gorden_Wei.jpg";
 import SonuKim from "../../public/Sonu_Kim.jpg";
 import LisaJia from "../../public/Lisa_Jia.jpg";
 import DannyChan from "../../public/Danny_Chan.jpg";
 import KazukiMiura from "../../public/Kazuki_Miura.png";
+import MichaelHuang from "../../public/Michael_Huang.jpg";
 
 type SessionType = {
   title: ReactNode;
@@ -37,7 +34,7 @@ type SessionType = {
     name: string;
     bio?: string;
     link?: string;
-    image?: any;
+    image?: StaticImageData;
   }[];
   time: string;
   type: "Track A" | "Track B";
@@ -207,28 +204,10 @@ export const Sessions = () => {
       title: "GenAI 生圖輕鬆上手 Demo",
       speakers: [
         {
-          name: "Shiun Chiu",
-          bio: "AWS Educate Student Ambassador, Taiwan",
-          image: ShiunChiu,
-          link: "https://www.linkedin.com/in/shiunchiu/",
-        },
-        {
-          name: "Yuna Lin",
-          bio: "AWS Educate Student Ambassador, Taiwan",
-          image: YunaLin,
-          link: "https://www.linkedin.com/in/yuna-lin-851371286/",
-        },
-        {
-          name: "Richie Liu",
-          bio: "AWS Educate Student Ambassador, Taiwan",
-          image: RichieLiu,
-          link: "https://www.linkedin.com/in/rich-liu/",
-        },
-        {
-          name: "Harry Chung",
-          bio: "AWS Educate Student Ambassador, Taiwan",
-          image: HarryChung,
-          link: "https://www.linkedin.com/in/chih-han-chung-943950268/",
+          name: "Michael Huang",
+          bio: "AWS Educate Cloud Ambassador, Taiwan",
+          link: "https://www.linkedin.com/in/michael-huang-1a1b1b1b/",
+          image: MichaelHuang,
         },
       ],
       time: "14:50 ~ 15:30",
@@ -335,23 +314,15 @@ const SessionRow = ({ session }: { session: SessionType }) => {
       </TableCell>
       <TableCell>
         <div className="space-y-1 flex flex-col gap-1 min-w-[240px]">
-          {session.speakers.map((speaker, index) => (
-            <Link
-              href={speaker.link ?? "#"}
-              rel="noopener noreferrer"
-              key={"speaker-link-" + index}
-              target={speaker.link ? "_blank" : "_self"}
-              onClick={(e) => {
-                if (!speaker.link) return e.preventDefault();
-              }}
-            >
-              <div className="flex gap-4">
+          {session.speakers.map((speaker, index) => {
+            const speakerComp = (
+              <div className="flex gap-4" key={`speaker-image-${index}`}>
                 {speaker.image && (
                   <Image
                     src={speaker.image}
                     alt={speaker.name}
                     unoptimized
-                    className="h-[3lh] object-contain w-auto rounded-full"
+                    className="h-[3lh] object-fit w-auto rounded-full aspect-square"
                   />
                 )}
                 <div className="flex flex-col justify-center">
@@ -361,8 +332,23 @@ const SessionRow = ({ session }: { session: SessionType }) => {
                   </i>
                 </div>
               </div>
-            </Link>
-          ))}
+            );
+
+            if (speaker.link)
+              return (
+                <Link
+                  href={speaker.link}
+                  rel="noopener noreferrer"
+                  key={`speaker-${index}`}
+                  target="_blank"
+                  aria-label={speaker.name}
+                >
+                  {speakerComp}
+                </Link>
+              );
+
+            return speakerComp;
+          })}
         </div>
       </TableCell>
     </TableRow>
