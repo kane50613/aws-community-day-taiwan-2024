@@ -3,17 +3,7 @@
 import { BlurIn } from "@/components/magicui/blur-in";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
-import React, { ReactNode, useState } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "./ui/table";
-import Link from "next/dist/client/link";
-import Image, { type StaticImageData } from "next/image";
+import { useState } from "react";
 import KosukeEnomoto from "../../public/Kosuke_Enomoto.jpg";
 import EricRuan from "../../public/eric-ruan.webp";
 import ShunYoshie from "../../public/ShunYoshie.jpeg";
@@ -26,25 +16,19 @@ import LisaJia from "../../public/Lisa_Jia.jpg";
 import DannyChan from "../../public/Danny_Chan.jpg";
 import KazukiMiura from "../../public/Kazuki_Miura.png";
 import MichaelHuang from "../../public/Michael_Huang.jpg";
+import ShiunChiu from "../../public/Shiun_Chiu.jpg";
+import YunaLin from "../../public/Yuan_Lin.jpg";
+import RichieLiu from "../../public/Richie_Liu.jpg";
+import HarryChung from "../../public/Harry_Chung.jpg";
 import EdwardOo from "../../public/EdwardOo.jpg";
 import { SectionTitle } from "@/components/section-title.tsx";
 import { SectionHeading } from "@/components/section-heading.tsx";
-
-type SessionType = {
-  title: ReactNode;
-  speakers: {
-    name: string;
-    bio?: string;
-    link?: string;
-    image?: StaticImageData;
-  }[];
-  time: string;
-  type: "Track A" | "Track B";
-  language?: "Mandarin" | "English";
-};
+import { SessionTable } from "@/components/session-table.tsx";
+import { SessionType } from "@/lib/session.ts";
 
 export const Sessions = () => {
   const t = useTranslations("sessions");
+
   const sessions: SessionType[] = [
     {
       title: t("keynoteAndPanel"),
@@ -263,9 +247,49 @@ export const Sessions = () => {
       type: "Track B",
       language: "English",
     },
+    {
+      time: "13:50 ~ 16:20",
+      title: "生成式 AI 工作坊：用 SageMaker 打造 AI 心理測驗",
+      type: "Workshop",
+      language: "Mandarin",
+      description: {
+        "zh-Hant-Tw":
+          "學習使用 SageMaker，從模型選擇、訓練到部署，親手打造一個模型！能夠分析測驗結果，以特定語氣提供個人化的測驗回饋，最後將這個模型整合至 AWS Educate 雲端大使所打造的心理測驗平台！把 AI 創意轉化為實際應用",
+        en: "Learn to use SageMaker, from model selection, training, to deployment, and build a model hands-on! The model will be able to analyze quiz results and provide personalized feedback in a specific tone. Finally, integrate this model into the psychological testing platform built by AWS Educate Cloud Ambassadors! Turn AI creativity into practical applications.",
+      },
+      speakers: [
+        {
+          name: "Shiun Chiu",
+          bio: "AWS Educate Student Ambassador, Taiwan",
+          image: ShiunChiu,
+          link: "https://www.linkedin.com/in/shiunchiu/",
+        },
+        {
+          name: "Yuna Lin",
+          bio: "AWS Educate Student Ambassador, Taiwan",
+          image: YunaLin,
+          link: "https://www.linkedin.com/in/yuna-lin-851371286/",
+        },
+        {
+          name: "Richie Liu",
+          bio: "AWS Educate Student Ambassador, Taiwan",
+          image: RichieLiu,
+          link: "https://www.linkedin.com/in/rich-liu/",
+        },
+        {
+          name: "Harry Chung",
+          bio: "AWS Educate Student Ambassador, Taiwan",
+          image: HarryChung,
+          link: "https://www.linkedin.com/in/chih-han-chung-943950268/",
+        },
+      ],
+    },
   ];
+
   const [selected, setSelected] = useState<SessionType["type"]>("Track A");
+
   const filteredSessions = sessions.filter((x) => x.type === selected);
+
   return (
     <div className="py-14 text-center container mx-auto relative">
       <SectionTitle>{t("title")}</SectionTitle>
@@ -279,87 +303,11 @@ export const Sessions = () => {
           <TabsList className="rounded-full [&>button]:rounded-full border-black/5 border dark:bg-neutral-900">
             <TabsTrigger value="Track A">Track A</TabsTrigger>
             <TabsTrigger value="Track B">Track B</TabsTrigger>
+            <TabsTrigger value="Workshop">{t("tabs.workshops")}</TabsTrigger>
           </TabsList>
         </Tabs>
       </BlurIn>
-      {filteredSessions.length ? (
-        <Table className="text-start">
-          <TableHeader>
-            <TableRow>
-              <TableHead>{t("table.time")}</TableHead>
-              <TableHead>{t("table.title")}</TableHead>
-              <TableHead>{t("table.speakers")}</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {sessions
-              .filter((session) => session.type === selected)
-              .map((session, i) => (
-                <SessionRow session={session} key={i} />
-              ))}
-          </TableBody>
-        </Table>
-      ) : (
-        <span className="text-primary/75 text-sm">{t("notAvailable")}</span>
-      )}
+      <SessionTable type={selected} sessions={filteredSessions} />
     </div>
-  );
-};
-
-const SessionRow = ({ session }: { session: SessionType }) => {
-  const t = useTranslations("sessions");
-  return (
-    <TableRow>
-      <TableCell className="text-base md:text-nowrap">{session.time}</TableCell>
-      <TableCell className="text-lg font-semibold min-w-[240px]">
-        <p>{session.title}</p>
-        {session.language && (
-          <>
-            <i className="text-sm font-normal text-primary/75">
-              {t(`${session.language}Sess`)}
-            </i>
-          </>
-        )}
-      </TableCell>
-      <TableCell>
-        <div className="space-y-1 flex flex-col gap-1 min-w-[240px]">
-          {session.speakers.map((speaker, index) => {
-            const speakerComp = (
-              <div className="flex gap-4" key={`speaker-image-${index}`}>
-                {speaker.image && (
-                  <Image
-                    src={speaker.image}
-                    alt={speaker.name}
-                    unoptimized
-                    className="h-[3lh] object-fit w-auto rounded-full aspect-square"
-                  />
-                )}
-                <div className="flex flex-col justify-center">
-                  <p key={index}>{speaker.name}</p>
-                  <i key={"speaker-title-" + index} className="text-primary/75">
-                    {speaker.bio}
-                  </i>
-                </div>
-              </div>
-            );
-
-            if (speaker.link)
-              return (
-                <Link
-                  href={speaker.link}
-                  rel="noopener noreferrer"
-                  key={`speaker-${index}`}
-                  target="_blank"
-                  aria-label={speaker.name}
-                >
-                  {speakerComp}
-                </Link>
-              );
-
-            return speakerComp;
-          })}
-        </div>
-      </TableCell>
-    </TableRow>
   );
 };

@@ -7,16 +7,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu.tsx";
-import { locales } from "@/i18n.ts";
+import { IntlLocale, locales } from "@/i18n.ts";
 import { Languages } from "lucide-react";
 
-const languageMap: Record<(typeof locales)[number], string> = {
+const languageMap: Record<IntlLocale, string> = {
   en: "English",
   "zh-Hant-Tw": "繁體中文",
   jp: "日本語",
 };
 
-const languagePathMap: Record<(typeof locales)[number], string> = {
+const languagePathMap: Record<IntlLocale, string> = {
   en: "/en",
   "zh-Hant-Tw": "/",
   jp: "/jp",

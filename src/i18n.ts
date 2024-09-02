@@ -4,7 +4,9 @@ import { getRequestConfig } from "next-intl/server";
 // Can be imported from a shared config
 export const locales = ["en", "zh-Hant-Tw", "jp"] as const;
 
-const messages: Record<(typeof locales)[number], any> = {
+export type IntlLocale = (typeof locales)[number];
+
+const messages = {
   en: {
     hero: {
       title: "AWS Community Day Taiwan 2024",
@@ -49,9 +51,6 @@ const messages: Record<(typeof locales)[number], any> = {
         workshops: "Workshops",
         lightning: "Lightning Talks",
       },
-    },
-    workshop: {
-      title: "Workshops",
     },
     footer: {
       sponsor: {
@@ -111,9 +110,6 @@ const messages: Record<(typeof locales)[number], any> = {
         lightning: "閃電講",
       },
     },
-    workshop: {
-      title: "工作坊",
-    },
     footer: {
       sponsor: {
         message: "有興趣贊助嗎？",
@@ -171,9 +167,6 @@ const messages: Record<(typeof locales)[number], any> = {
         lightning: "ライトニングトーク",
       },
     },
-    workshop: {
-      title: "ワークショップ",
-    },
     footer: {
       sponsor: {
         message: "スポンサーにご興味がありますか？",
@@ -189,7 +182,7 @@ const messages: Record<(typeof locales)[number], any> = {
       terms: "利用規約",
     },
   },
-};
+} as const satisfies Record<IntlLocale, any>;
 
 export default getRequestConfig(async ({ locale }) => {
   const message = messages[locale as keyof typeof messages];
