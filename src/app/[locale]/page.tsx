@@ -9,6 +9,7 @@ import { MotionLoader } from "@/components/motion-loader.tsx";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n.ts";
 import { Metadata } from "next";
+import { Keynote } from "@/components/keynote.tsx";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -55,6 +56,7 @@ export default function Page({
       />
       <Hero />
       <Images />
+      <Keynote />
       <Sessions />
       <Sponsors />
       <Footer />
