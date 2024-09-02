@@ -9,8 +9,8 @@ export const WorkshopSession = ({ session }: { session: SessionType }) => {
   const locale = useLocale();
 
   return (
-    <div className="py-8 md:text-start container mx-auto relative rounded-md bg-primary-foreground text-primary border">
-      <span className="text-lg font-medium text-primary/75">
+    <div className="py-8 md:text-start container mx-auto relative md:rounded-md bg-primary-foreground text-primary border-y md:border">
+      <span className="font-medium text-primary/75">
         {session.time} • {t(`${session.language}Sess`)}
       </span>
       <h3 className="text-2xl md:text-3xl font-display font-bold mb-2 py-1.5 text-balance">

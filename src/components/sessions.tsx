@@ -291,9 +291,9 @@ export const Sessions = () => {
   const filteredSessions = sessions.filter((x) => x.type === selected);
 
   return (
-    <div className="py-14 text-center container mx-auto relative">
+    <div className="py-14 text-center md:container mx-auto relative">
       <SectionTitle>{t("title")}</SectionTitle>
-      <SectionHeading>{t("heading")}</SectionHeading>
+      <SectionHeading className="text-balance">{t("heading")}</SectionHeading>
       <BlurIn delay={0.2}>
         <Tabs
           value={selected}
