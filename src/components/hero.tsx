@@ -69,6 +69,12 @@ export const Hero = () => {
             <a
               href="https://tw.events.awsug.net/events/aws-community-day-2024"
               target="_blank"
+              onClick={() => {
+                if (process.env.NODE_ENV === "production") {
+                  // @ts-expect-error
+                  window.dadk("track", "SubmitApplication");
+                }
+              }}
             >
               {t("register")}
               <ArrowRightIcon className="w-4 ml-2" />
