@@ -39,6 +39,12 @@ export const Header = () => {
             href="https://tw.events.awsug.net/events/aws-community-day-2024"
             target="_blank"
             download
+            onClick={() => {
+              if (process.env.NODE_ENV === "production") {
+                // @ts-expect-error
+                window.dadk("track", "SubmitApplication");
+              }
+            }}
           >
             {t("register")}
           </a>
