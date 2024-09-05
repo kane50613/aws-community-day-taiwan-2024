@@ -38,6 +38,7 @@ export const Header = () => {
           <a
             href="https://tw.events.awsug.net/events/aws-community-day-2024"
             target="_blank"
+            download
           >
             {t("register")}
           </a>

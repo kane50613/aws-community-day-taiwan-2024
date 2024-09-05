@@ -69,6 +69,7 @@ export const Hero = () => {
             <a
               href="https://tw.events.awsug.net/events/aws-community-day-2024"
               target="_blank"
+              download
             >
               {t("register")}
               <ArrowRightIcon className="w-4 ml-2" />
