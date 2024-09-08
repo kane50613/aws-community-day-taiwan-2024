@@ -67,7 +67,7 @@ export const Sessions = () => {
       language: "English",
     },
     {
-      title: "運用AWS技術打造智慧防災助手",
+      title: t("eric.bedrock.title"),
       speakers: [
         {
           name: "Eric Ruan",

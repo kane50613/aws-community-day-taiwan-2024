@@ -12,7 +12,7 @@ export const Keynote = () => (
     <div className="flex gap-8 md:flex-row-reverse flex-col">
       <div className="bg-secondary/50 text-start border p-8 rounded-3xl flex flex-col">
         <p className="text-primary/75">9:30 - 10:30 • Track A</p>
-        <div className="flex-grow" />
+        <div className="flex-grow mb-4 md:mb-0" />
         <p className="text-xl md:text-2xl font-medium mb-1">黄浩文</p>
         <p className="text-primary/85">
           擁有電信、互聯網以及雲計算等行業超過 20

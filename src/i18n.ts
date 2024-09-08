@@ -51,6 +51,11 @@ const messages = {
         workshops: "Workshops",
         lightning: "Lightning Talks",
       },
+      eric: {
+        bedrock: {
+          title: "From Scratch: Building Custom AI Solutions with AWS Bedrock",
+        },
+      },
     },
     footer: {
       sponsor: {
@@ -109,6 +114,11 @@ const messages = {
         workshops: "工作坊",
         lightning: "閃電講",
       },
+      eric: {
+        bedrock: {
+          title: "從零開始：透過 AWS Bedrock 打造客製化 AI 解決方案",
+        },
+      },
     },
     footer: {
       sponsor: {
@@ -165,6 +175,12 @@ const messages = {
         main: "メイントラック",
         workshops: "ワークショップ",
         lightning: "ライトニングトーク",
+      },
+      eric: {
+        bedrock: {
+          title:
+            "ゼロから始める：AWS Bedrock を活用したカスタム AI ソリューションの構築",
+        },
       },
     },
     footer: {
