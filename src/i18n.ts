@@ -34,6 +34,7 @@ const messages = {
       silver: "Silver",
     },
     sessions: {
+      keynote: "Keynote",
       title: "Sessions",
       heading: "More sessions coming soon - Stay tuned",
       notAvailable: "No sessions available at the moment.",
@@ -97,6 +98,7 @@ const messages = {
       silver: "白銀級",
     },
     sessions: {
+      keynote: "主題演講",
       title: "議程",
       heading: "更多議程，即將公開 - 敬請期待",
       notAvailable: "目前尚無議程。",
@@ -159,6 +161,7 @@ const messages = {
       silver: "シルバー",
     },
     sessions: {
+      keynote: "キーノート",
       title: "セッション",
       heading: "さらなるセッションが近日公開 - お楽しみに",
       notAvailable: "現在、利用可能なセッションはありません。",
