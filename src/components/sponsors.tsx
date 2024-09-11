@@ -36,6 +36,11 @@ const sponsors: {
   ],
   diamond: [
     {
+      title: "MetaAge 邁達特",
+      image: "/Metaage.png",
+      link: "https://www.metaage.com.tw/",
+    },
+    {
       title: "JetBrains",
       image:
         "https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg",
