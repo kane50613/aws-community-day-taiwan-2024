@@ -176,7 +176,7 @@ export const Sessions = () => {
       language: "Mandarin",
     },
     {
-      title: "AWS Certification - 備考訓練營",
+      title: "見「證」巔峰 : Golden Jacket 得主的雲端技能養成術",
       speakers: [
         {
           name: "Coming soon...",
