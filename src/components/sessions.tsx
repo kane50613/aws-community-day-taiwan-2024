@@ -201,7 +201,7 @@ export const Sessions = () => {
       language: "Mandarin",
     },
     {
-      title: "GenAI 生圖輕鬆上手 Demo",
+      title: "GenAI 圖像生成理論與運用", 
       speakers: [
         {
           name: "Michael Huang",
