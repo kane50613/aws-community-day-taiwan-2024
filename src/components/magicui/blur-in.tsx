@@ -6,7 +6,11 @@ import { createElement, FC, PropsWithChildren } from "react";
 
 interface BlurIntProps extends PropsWithChildren {
   // a motion component function
-  component?: FC<MotionProps>;
+  component?: FC<
+    MotionProps & {
+      className?: string;
+    }
+  >;
   className?: string;
   variant?: {
     hidden: { filter: string; opacity: number };
@@ -40,6 +44,6 @@ export const BlurIn = ({
       variants: combinedVariants,
       className,
     },
-    children,
+    children
   );
 };
