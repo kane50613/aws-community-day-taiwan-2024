@@ -18,6 +18,13 @@ type Speaker = SessionType["speakers"][number] & {
 
 const speakers: Speaker[] = [
   {
+    name: "Amy Lee",
+    bio: "AWS User Group Taiwan Community Leader",
+    image: AmyLee,
+    link: "https://www.linkedin.com/in/shu-mei-lee/",
+    type: "host",
+  },
+  {
     name: "林奇葳",
     bio: "1111 人力銀行高階獵才中心 總經理",
     image: LoveKiwi,
@@ -28,14 +35,6 @@ const speakers: Speaker[] = [
     bio: "國泰金控 數數發中心 雲端策略發展部 協理",
     image: Otto,
     type: "speaker",
-  },
-
-  {
-    name: "Amy Lee",
-    bio: "AWS User Group Taiwan Community Leader",
-    image: AmyLee,
-    link: "https://www.linkedin.com/in/shu-mei-lee/",
-    type: "host",
   },
   {
     name: "Eugene Wang",

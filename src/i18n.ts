@@ -128,7 +128,7 @@ const messages = {
       },
     },
     panelDiscussion: {
-      title: "座談研討會",
+      title: "焦點論壇",
       host: "主持人",
       speaker: "演講者",
     },
