@@ -67,7 +67,7 @@ export const PanelDiscussion = () => {
         培育乃至留任人才的方式， 以及產、學如何適應這股潮流，
         讓企業能夠永續；讓學生、新鮮人能夠在浪潮中準備自己。
       </p>
-      <div className="grid grid-cols-5 w-full mt-12 gap-4">
+      <div className="grid sm:grid-cols-3 md:grid-cols-5 w-full mt-12 gap-4">
         {speakers.map((speaker, index) => (
           <BlurFade key={index} delay={index * 0.1} inView>
             <div className="flex flex-col items-center h-full">
