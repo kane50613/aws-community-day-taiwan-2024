@@ -21,6 +21,8 @@ import YunaLin from "../../../public/Yuan_Lin.jpg";
 import RichieLiu from "../../../public/Richie_Liu.jpg";
 import HarryChung from "../../../public/Harry_Chung.jpg";
 import EdwardOo from "../../../public/EdwardOo.jpg";
+import KimiHuang from "../../../public/Kimi_Huang.jpg";
+import ScottHsieh from "../../../public/Scott_Hsieh.jpg";
 import { SectionTitle } from "@/components/section-title.tsx";
 import { SectionHeading } from "@/components/section-heading.tsx";
 import { SessionTable } from "@/components/session-table.tsx";
@@ -179,7 +181,14 @@ export const Sessions = () => {
       title: "見「證」巔峰 : Golden Jacket 得主的雲端技能養成術",
       speakers: [
         {
-          name: "Coming soon...",
+          name: "Kimi Huang",
+          bio: "AUO Corporation / Principal Site Reliability Engineer",
+          image: KimiHuang,
+        },
+        {
+          name: "Scott Hsieh",
+          bio: "104 Corporation / AWS Community Hero",
+          image: ScottHsieh,
         },
       ],
       time: "13:00 ~ 13:40",
