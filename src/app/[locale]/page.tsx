@@ -30,7 +30,7 @@ export async function generateMetadata({
 
   return {
     title: t("title"),
-    description: t("description"),
+    description: `${t("description")} - ${t("date")}`,
     alternates: {
       canonical: new URL(
         `https://awscmd.tw/${locale === "zh-Hant-Tw" ? "" : locale}`,
