@@ -18,7 +18,7 @@ export const Speaker = ({
           alt={speaker.name}
           unoptimized
           className={cn(
-            "h-[3lh] object-fit w-auto rounded-full aspect-square",
+            "h-[3lh] object-cover w-auto rounded-full aspect-square",
             compact && "h-[2lh]",
           )}
         />
