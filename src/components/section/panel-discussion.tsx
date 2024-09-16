@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { SectionTitle } from "@/components/section-title.tsx";
 import { SectionHeading } from "@/components/section-heading.tsx";

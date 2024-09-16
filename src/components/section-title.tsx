@@ -8,7 +8,7 @@ export const SectionTitle = (props: ComponentProps<"span">) => (
     component={m.span}
     {...props}
     className={cn(
-      "text-lg font-medium md:text-xl text-primary/75",
+      "text-lg font-medium md:text-xl text-primary/75 max-w-screen-xl",
       props.className,
     )}
   />
