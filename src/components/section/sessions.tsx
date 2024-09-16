@@ -300,7 +300,7 @@ export const Sessions = () => {
           onValueChange={(value) => setSelected(value as SessionType["type"])}
           className="mb-12 sticky top-0"
         >
-          <TabsList className="rounded-full [&>button]:rounded-full border-black/5 border dark:bg-neutral-900">
+          <TabsList className="rounded-full [&>button]:rounded-full border-muted/30 border dark:bg-neutral-950">
             <TabsTrigger value="Track A">Track A</TabsTrigger>
             <TabsTrigger value="Track B">Track B</TabsTrigger>
             <TabsTrigger value="Workshop">{t("tabs.workshops")}</TabsTrigger>
