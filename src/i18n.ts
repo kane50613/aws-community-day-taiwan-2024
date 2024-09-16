@@ -17,11 +17,6 @@ const messages = {
       date: "September 28, 2024 (Saturday)",
       location: "POPOP Taipei (Next to Nangang Station)",
     },
-    metadata: {
-      title: "AWS Community Day Taiwan 2024",
-      description:
-        "Connect with AWS experts and peers to learn, share, and innovate together.",
-    },
     header: {
       register: "Register",
     },
@@ -87,10 +82,6 @@ const messages = {
       date: "2024 年 09 月 28 日 (六)",
       location: "瓶蓋工廠台北製造所 (南港車站旁)",
     },
-    metadata: {
-      title: "AWS Community Day Taiwan 2024",
-      description: "與 AWS 專家和同行建立聯繫，一起學習、分享和創新。",
-    },
     header: {
       register: "我要報名",
     },
@@ -154,10 +145,6 @@ const messages = {
       register: "今すぐ登録",
       date: "2024年9月28日（土）",
       location: "ボトルキャップファクトリー台北（南港駅隣接）",
-    },
-    metadata: {
-      title: "AWS コミュニティデー台湾 2024",
-      description: "AWS の専門家や仲間とつながり、共に学び、共有し、革新する。",
     },
     header: {
       register: "登録する",

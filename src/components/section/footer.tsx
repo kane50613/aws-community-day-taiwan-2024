@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 
 export const Footer = () => {
   const t = useTranslations("footer");
-  const metadataT = useTranslations("metadata");
+  const heroT = useTranslations("hero");
 
   return (
     <footer className="w-full container">
@@ -39,7 +39,7 @@ export const Footer = () => {
       </div>
       <div className="flex flex-col md:flex-row md:items-center justify-between border-t py-14 gap-8">
         <div className="space-y-4">
-          <p className="font-medium text-lg">{metadataT("title")}</p>
+          <p className="font-medium text-lg">{heroT("title")}</p>
           <p className="text-primary/75 text-sm">{t("copyright")}</p>
           <p className="text-primary/60 text-sm">
             {t("translationDisclaimer")}
