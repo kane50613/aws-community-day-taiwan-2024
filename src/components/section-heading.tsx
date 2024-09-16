@@ -8,7 +8,7 @@ export const SectionHeading = (props: ComponentProps<"h2">) => (
     component={m.h2}
     {...props}
     className={cn(
-      "text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-12 py-1.5",
+      "text-3xl md:text-5xl lg:text-6xl font-display lg:leading-snug font-bold mb-12 py-1.5",
       props.className,
     )}
   />

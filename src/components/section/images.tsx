@@ -1,6 +1,6 @@
-import { Marquee } from "@/components/magicui/marquee";
-import { FadeText } from "@/components/magicui/fade-text";
-import { BlurIn } from "@/components/magicui/blur-in";
+import { Marquee } from "@/components/magicui/marquee.tsx";
+import { FadeText } from "@/components/magicui/fade-text.tsx";
+import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import Image from "next/image";
 
 const images = [

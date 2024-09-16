@@ -58,6 +58,11 @@ const messages = {
         },
       },
     },
+    panelDiscussion: {
+      title: "Panel Discussion",
+      host: "Host",
+      speaker: "Speaker",
+    },
     footer: {
       sponsor: {
         message: "Interested in sponsoring?",
@@ -122,6 +127,11 @@ const messages = {
         },
       },
     },
+    panelDiscussion: {
+      title: "座談研討會",
+      host: "主持人",
+      speaker: "演講者",
+    },
     footer: {
       sponsor: {
         message: "有興趣贊助嗎？",
@@ -185,6 +195,11 @@ const messages = {
             "ゼロから始める：AWS Bedrock を活用したカスタム AI ソリューションの構築",
         },
       },
+    },
+    panelDiscussion: {
+      title: "パネルディスカッション",
+      host: "ホスト",
+      speaker: "スピーカー",
     },
     footer: {
       sponsor: {

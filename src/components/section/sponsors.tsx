@@ -1,5 +1,5 @@
 "use client";
-import { BlurIn } from "@/components/magicui/blur-in";
+import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import { m } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";

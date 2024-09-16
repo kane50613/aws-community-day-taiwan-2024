@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { BlurIn } from "@/components/magicui/blur-in";
+import { Button } from "@/components/ui/button.tsx";
+import { ThemeToggle } from "@/components/theme-toggle.tsx";
+import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "@/components/language-toggle.tsx";

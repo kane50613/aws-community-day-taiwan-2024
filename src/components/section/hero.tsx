@@ -1,10 +1,10 @@
 "use client";
 
-import { BlurIn } from "@/components/magicui/blur-in";
-import { cn } from "@/lib/utils";
+import { BlurIn } from "@/components/magicui/blur-in.tsx";
+import { cn } from "@/lib/utils.ts";
 import { ArrowRightIcon } from "lucide-react";
 import { m } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button.tsx";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text.tsx";
 import { useTranslations } from "next-intl";
 import Link from "next/link";

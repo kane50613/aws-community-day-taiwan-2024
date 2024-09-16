@@ -1,15 +1,16 @@
-import { Header } from "@/components/header.tsx";
+import { Header } from "@/components/section/header.tsx";
 import { Particles } from "@/components/magicui/particles.tsx";
-import { Hero } from "@/components/hero.tsx";
-import { Images } from "@/components/images.tsx";
-import { Sessions } from "@/components/sessions.tsx";
-import { Sponsors } from "@/components/sponsors.tsx";
-import { Footer } from "@/components/footer.tsx";
+import { Hero } from "@/components/section/hero.tsx";
+import { Images } from "@/components/section/images.tsx";
+import { Sessions } from "@/components/section/sessions.tsx";
+import { Sponsors } from "@/components/section/sponsors.tsx";
+import { Footer } from "@/components/section/footer.tsx";
 import { MotionLoader } from "@/components/motion-loader.tsx";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n.ts";
 import { Metadata } from "next";
-import { Keynote } from "@/components/keynote.tsx";
+import { Keynote } from "@/components/section/keynote.tsx";
+import { PanelDiscussion } from "@/components/section/panel-discussion.tsx";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -57,6 +58,7 @@ export default function Page({
       <Hero />
       <Images />
       <Keynote />
+      <PanelDiscussion />
       <Sessions />
       <Sponsors />
       <Footer />

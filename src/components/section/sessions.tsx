@@ -1,26 +1,26 @@
 "use client";
 
-import { BlurIn } from "@/components/magicui/blur-in";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BlurIn } from "@/components/magicui/blur-in.tsx";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import KosukeEnomoto from "../../public/Kosuke_Enomoto.jpg";
-import EricRuan from "../../public/eric-ruan.webp";
-import ShunYoshie from "../../public/ShunYoshie.jpeg";
-import SubinKim from "../../public/Subin_Kim.png";
-import ErnestChiang from "../../public/Ernest_Chiang.jpg";
-import TonyChung from "../../public/Tony_Chung.jpeg";
-import GordenWei from "../../public/Gorden_Wei.jpg";
-import SonuKim from "../../public/Sonu_Kim.jpg";
-import LisaJia from "../../public/Lisa_Jia.jpg";
-import DannyChan from "../../public/Danny_Chan.jpg";
-import KazukiMiura from "../../public/Kazuki_Miura.png";
-import MichaelHuang from "../../public/Michael_Huang.jpg";
-import ShiunChiu from "../../public/Shiun_Chiu.jpg";
-import YunaLin from "../../public/Yuan_Lin.jpg";
-import RichieLiu from "../../public/Richie_Liu.jpg";
-import HarryChung from "../../public/Harry_Chung.jpg";
-import EdwardOo from "../../public/EdwardOo.jpg";
+import KosukeEnomoto from "../../../public/Kosuke_Enomoto.jpg";
+import EricRuan from "../../../public/eric-ruan.webp";
+import ShunYoshie from "../../../public/ShunYoshie.jpeg";
+import SubinKim from "../../../public/Subin_Kim.png";
+import ErnestChiang from "../../../public/Ernest_Chiang.jpg";
+import TonyChung from "../../../public/Tony_Chung.jpeg";
+import GordenWei from "../../../public/Gorden_Wei.jpg";
+import SonuKim from "../../../public/Sonu_Kim.jpg";
+import LisaJia from "../../../public/Lisa_Jia.jpg";
+import DannyChan from "../../../public/Danny_Chan.jpg";
+import KazukiMiura from "../../../public/Kazuki_Miura.png";
+import MichaelHuang from "../../../public/Michael_Huang.jpg";
+import ShiunChiu from "../../../public/Shiun_Chiu.jpg";
+import YunaLin from "../../../public/Yuan_Lin.jpg";
+import RichieLiu from "../../../public/Richie_Liu.jpg";
+import HarryChung from "../../../public/Harry_Chung.jpg";
+import EdwardOo from "../../../public/EdwardOo.jpg";
 import { SectionTitle } from "@/components/section-title.tsx";
 import { SectionHeading } from "@/components/section-heading.tsx";
 import { SessionTable } from "@/components/session-table.tsx";
@@ -201,12 +201,12 @@ export const Sessions = () => {
       language: "Mandarin",
     },
     {
-      title: "GenAI 圖像生成理論與運用", 
+      title: "GenAI 圖像生成理論與運用",
       speakers: [
         {
           name: "Michael Huang",
           bio: "AWS Educate Cloud Ambassador, Taiwan",
-          link: "https://www.linkedin.com/in/michael-huang-1a1b1b1b/",
+          link: "https://www.linkedin.com/in/maoxun-huang-a77913268/",
           image: MichaelHuang,
         },
       ],

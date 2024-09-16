@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Haowen from "public/Haowen.png";
+import Haowen from "../../../public/Haowen.png";
 import { SectionTitle } from "@/components/section-title.tsx";
 import { SectionHeading } from "@/components/section-heading.tsx";
 import { useTranslations } from "next-intl";
@@ -10,7 +10,7 @@ export const Keynote = () => {
   const t = useTranslations("sessions");
 
   return (
-    <div className="container py-14 text-center">
+    <div className="container py-14 text-center max-w-screen-xl">
       <SectionTitle>{t("keynote")}</SectionTitle>
       <SectionHeading>AI的過去現在未來</SectionHeading>
       <div className="flex gap-8 md:flex-row-reverse flex-col">
@@ -33,7 +33,7 @@ export const Keynote = () => {
           src={Haowen}
           alt="黄浩文"
           unoptimized
-          className="object-contain aspect-square rounded-3xl border max-w-52"
+          className="object-cover aspect-square rounded-3xl border max-w-52"
         />
       </div>
     </div>
