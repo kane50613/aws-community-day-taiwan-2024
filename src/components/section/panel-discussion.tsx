@@ -60,7 +60,7 @@ export const PanelDiscussion = () => {
         <br />
         AI 與新世代人才的融合之路
       </SectionHeading>
-      <p className="text-primary/85 text-balance">
+      <p className="text-primary/85 text-balance leading-relaxed">
         邀請來自業界領導者、及新世代雲端、AI人才分享經驗與跨世代見解，探討 AI
         與雲端技術將如何重塑企業吸引、
         <br />
