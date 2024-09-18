@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu.tsx";
 import { IntlLocale, locales } from "@/i18n.ts";
 import { Languages } from "lucide-react";
+import Link from "next/link";
 
 const languageMap: Record<IntlLocale, string> = {
   en: "English",
@@ -34,9 +35,9 @@ export const LanguageToggle = () => (
         // no idea why next.js Link won't refresh locale param on layout,
         // so using anchor tag instead to force refresh
         <DropdownMenuItem key={locale} asChild>
-          <a href={languagePathMap[locale]} lang={locale}>
+          <Link href={languagePathMap[locale]} lang={locale}>
             {languageMap[locale]}
-          </a>
+          </Link>
         </DropdownMenuItem>
       ))}
     </DropdownMenuContent>

@@ -1,18 +1,14 @@
-"use client";
-
 import { Button } from "@/components/ui/button.tsx";
 import { ThemeToggle } from "@/components/theme-toggle.tsx";
 import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "@/components/language-toggle.tsx";
-import Image from "next/image";
-import { useMountedTheme } from "@/lib/use-mounted-theme.ts";
+import { ThemedLogo } from "../themed-logo";
+import { TrackAnchor } from "../track-anchor";
 
 export const Header = () => {
   const t = useTranslations("header");
-
-  const { theme, mounted } = useMountedTheme();
 
   return (
     <BlurIn
@@ -21,33 +17,19 @@ export const Header = () => {
       delay={0.3}
     >
       <div className="container flex items-center h-full py-2">
-        <Image
-          src={
-            mounted && theme === "light" ? "/logo-black.svg" : "/logo-white.svg"
-          }
-          alt="AWS Community Day 2024"
-          width={1068}
-          height={390}
-          unoptimized
-          className="h-8 md:h-12 w-auto"
-        />
+        <ThemedLogo />
         <div className="flex-grow" />
         <LanguageToggle />
         <ThemeToggle />
         <Button variant="secondary" className="ml-2" asChild>
-          <a
+          <TrackAnchor
             href="https://tw.events.awsug.net/events/aws-community-day-2024"
             target="_blank"
+            track="SubmitApplication"
             download
-            onClick={() => {
-              if (process.env.NODE_ENV === "production") {
-                // @ts-expect-error
-                window.dadk("track", "SubmitApplication");
-              }
-            }}
           >
-            {t("register")}
-          </a>
+            {t("register")}{" "}
+          </TrackAnchor>
         </Button>
       </div>
     </BlurIn>

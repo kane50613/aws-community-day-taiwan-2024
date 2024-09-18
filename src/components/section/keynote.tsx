@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Haowen from "../../../public/Haowen.png";
 import { SectionTitle } from "@/components/section-title.tsx";

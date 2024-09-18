@@ -33,14 +33,14 @@ export async function generateMetadata({
     description: `${t("description")}${t("date")}`,
     alternates: {
       canonical: new URL(
-        `https://awscmd.tw/${locale === "zh-Hant-Tw" ? "" : locale}`,
+        `https://awscmd.tw/${locale === "zh-Hant-Tw" ? "" : locale}`
       ),
     },
   } as Metadata;
 }
 
 export default function Page({
-  params: { locale },
+  params: { locale = "zh-Hant-Tw" },
 }: {
   params: {
     locale: string;

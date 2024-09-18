@@ -1,4 +1,3 @@
-"use client";
 import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import { m } from "framer-motion";
 import Image from "next/image";
@@ -91,7 +90,7 @@ export const Sponsors = () => {
       {Object.entries(sponsors).map(([tier, sponsorList], tierIndex) =>
         sponsorList.length ? (
           <SponsorTier key={tierIndex} tier={tier} sponsorList={sponsorList} />
-        ) : null,
+        ) : null
       )}
     </div>
   );

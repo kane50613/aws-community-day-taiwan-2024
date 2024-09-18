@@ -1,5 +1,3 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { SectionTitle } from "@/components/section-title.tsx";
 import { SectionHeading } from "@/components/section-heading.tsx";
@@ -56,11 +54,7 @@ export const PanelDiscussion = () => {
   return (
     <div className="container py-14 text-center max-w-screen-xl">
       <SectionTitle>{t("title")}</SectionTitle>
-      <SectionHeading>
-        破解焦慮世代：雲端、
-        <br />
-        AI 與新世代人才的融合之路
-      </SectionHeading>
+      <SectionHeading>{t("heading")}</SectionHeading>
       <p className="text-primary/85 text-balance leading-relaxed">
         邀請來自業界領導者、及新世代雲端、AI人才分享經驗與跨世代見解，探討 AI
         與雲端技術將如何重塑企業吸引、

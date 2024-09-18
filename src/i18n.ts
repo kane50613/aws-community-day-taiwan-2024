@@ -6,7 +6,7 @@ export const locales = ["en", "zh-Hant-Tw", "jp"] as const;
 
 export type IntlLocale = (typeof locales)[number];
 
-const messages = {
+export const messages = {
   en: {
     hero: {
       title: "AWS Community Day Taiwan 2024",
@@ -55,6 +55,8 @@ const messages = {
     },
     panelDiscussion: {
       title: "Panel Discussion",
+      heading:
+        "Deconstructing the Future: Combining Cloud, AI, and New Generation Talent",
       host: "Host",
       speaker: "Speaker",
     },
@@ -120,6 +122,7 @@ const messages = {
     },
     panelDiscussion: {
       title: "焦點論壇",
+      heading: "破解焦慮世代：雲端、AI 與新世代人才的融合之路",
       host: "主持人",
       speaker: "演講者",
     },
@@ -185,6 +188,7 @@ const messages = {
     },
     panelDiscussion: {
       title: "パネルディスカッション",
+      heading: "不安な世代を解き明かす：クラウド、AI、新世代の人材が融合する道",
       host: "ホスト",
       speaker: "スピーカー",
     },

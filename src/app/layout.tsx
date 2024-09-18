@@ -21,7 +21,9 @@ export default async function Layout({
 }) {
   unstable_setRequestLocale(locale);
 
-  const messages = await getMessages();
+  const messages = await getMessages({
+    locale,
+  });
 
   return (
     <html lang={locale}>
@@ -34,11 +36,11 @@ export default async function Layout({
         )}
       </head>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NextIntlClientProvider messages={messages}>
             {children}
-          </ThemeProvider>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
