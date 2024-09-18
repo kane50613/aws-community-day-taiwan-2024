@@ -42,15 +42,28 @@ export const Sessions = () => {
       time: "9:30 ~ 11:30",
       type: "Track A",
     },
+
     {
-      title: "cdk-appsync-starter - An AWS AppSync Framework based on CDK",
+      title: (
+        <>
+          Dive deep into serverless system design: <br />
+          Event-driven, Decoupling, Real-world Practice
+        </>
+      ),
       speakers: [
         {
-          name: "Titan Lin",
-          bio: "Taiwan",
+          name: "Danny Chan",
+          bio: "AWS Community Builder, Hong Kong",
+          link: "https://www.linkedin.com/in/danny-code/",
+          image: DannyChan,
+        },
+        {
+          name: "Lisa Jia",
+          bio: "Entrepreneur, Hong Kong",
+          image: LisaJia,
         },
       ],
-      time: "12:10 ~ 12:50",
+      time: "15:40 ~ 16:20",
       type: "Track A",
       language: "Mandarin",
     },
@@ -83,26 +96,14 @@ export const Sessions = () => {
       language: "Mandarin",
     },
     {
-      title: (
-        <>
-          Dive deep into serverless system design: <br />
-          Event-driven, Decoupling, Real-world Practice
-        </>
-      ),
+      title: "cdk-appsync-starter - An AWS AppSync Framework based on CDK",
       speakers: [
         {
-          name: "Danny Chan",
-          bio: "AWS Community Builder, Hong Kong",
-          link: "https://www.linkedin.com/in/danny-code/",
-          image: DannyChan,
-        },
-        {
-          name: "Lisa Jia",
-          bio: "Entrepreneur, Hong Kong",
-          image: LisaJia,
+          name: "Titan Lin",
+          bio: "Taiwan",
         },
       ],
-      time: "15:40 ~ 16:20",
+      time: "12:10 ~ 12:50",
       type: "Track A",
       language: "Mandarin",
     },
@@ -290,6 +291,21 @@ export const Sessions = () => {
           bio: "AWS Educate Student Ambassador, Taiwan",
           image: HarryChung,
           link: "https://www.linkedin.com/in/chih-han-chung-943950268/",
+        },
+      ],
+    },
+    {
+      time: "14:50 ~ 17:00",
+      title: "Amazon Athena：初識雅典娜，連結智慧的火炬",
+      type: "Workshop",
+      language: "Mandarin",
+      description:
+        "這場工作坊中，你能夠迅速地認識、操作 Amazon Athena 的基礎和進階功能，包括基礎知識、聯合查詢、用戶定義的函數查詢（UDFs）、事務型資料湖的建置與查詢、透過 Amazon Athena 施展機器學習的能力到 Apache Spark 的使用。更好地認識 Amazon Athena 之後，在變化多端的世界裡頭，針對資料洞見，你就能有更多的手段去達成你的目的。認識完 Athena 再回去黑悟空，簡直完美！",
+      speakers: [
+        {
+          name: "Scott Hsieh",
+          bio: "Data Architect in 104, AWS Data Hero",
+          image: ScottHsieh,
         },
       ],
     },
