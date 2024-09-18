@@ -1,7 +1,6 @@
 import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { cn } from "@/lib/utils.ts";
 import React from "react";
 import { SectionTitle } from "@/components/section-title.tsx";
@@ -100,7 +99,7 @@ interface SponsorImageProps {
 }
 
 export const SponsorImage: React.FC<SponsorImageProps> = ({ sponsor }) => (
-  <Link
+  <a
     href={sponsor.link}
     target="_blank"
     rel="noreferrer noopener"
@@ -115,7 +114,7 @@ export const SponsorImage: React.FC<SponsorImageProps> = ({ sponsor }) => (
       className={cn("object-contain", sponsor.style)}
       alt={sponsor.title}
     />
-  </Link>
+  </a>
 );
 
 interface SponsorTierProps {

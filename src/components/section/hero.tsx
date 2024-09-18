@@ -36,13 +36,13 @@ export const Hero = () => {
           className="text-lg md:text-xl text-foreground/90 text-center mb-12 text-balance"
         >
           {t("date")}{" "}
-          <Link
+          <a
             href="https://maps.app.goo.gl/n94UJm493sSvmcdT8"
             target="_blank"
             rel="noopener noreferrer"
           >
             {t("location")}
-          </Link>
+          </a>
         </BlurIn>
         <BlurIn delay={0.45}>
           <Button className="rounded-full px-6" asChild>

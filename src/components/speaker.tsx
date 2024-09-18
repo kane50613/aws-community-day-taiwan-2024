@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils.ts";
 import Image from "next/image";
-import Link from "next/dist/client/link";
 import { SessionType } from "@/lib/session.ts";
 
 export const Speaker = ({
@@ -33,14 +32,14 @@ export const Speaker = ({
 
   if (speaker.link)
     return (
-      <Link
+      <a
         href={speaker.link}
         rel="noopener noreferrer"
         target="_blank"
         aria-label={speaker.name}
       >
         {speakerComp}
-      </Link>
+      </a>
     );
 
   return speakerComp;

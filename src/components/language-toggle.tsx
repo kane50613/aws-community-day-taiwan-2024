@@ -35,7 +35,7 @@ export const LanguageToggle = () => (
         // no idea why next.js Link won't refresh locale param on layout,
         // so using anchor tag instead to force refresh
         <DropdownMenuItem key={locale} asChild>
-          <Link href={languagePathMap[locale]} lang={locale}>
+          <Link href={languagePathMap[locale]} lang={locale} scroll={false}>
             {languageMap[locale]}
           </Link>
         </DropdownMenuItem>
