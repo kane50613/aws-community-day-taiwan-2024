@@ -15,7 +15,6 @@ export const Keynote = () => {
         <Image
           src={Haowen}
           alt="黄浩文"
-          unoptimized
           className="object-cover sm:block hidden aspect-square rounded-3xl border max-w-52"
         />
         <div className="bg-secondary/50 text-start border p-8 rounded-3xl flex flex-col">
@@ -24,7 +23,6 @@ export const Keynote = () => {
             <Image
               src={Haowen}
               alt="黄浩文"
-              unoptimized
               className="max-w-20 border rounded-xl sm:hidden"
             />
             <div>

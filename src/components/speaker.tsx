@@ -16,10 +16,9 @@ export const Speaker = ({
         <Image
           src={speaker.image}
           alt={speaker.name}
-          unoptimized
           className={cn(
             "h-[3lh] object-cover w-auto rounded-full aspect-square",
-            compact && "h-[2lh]",
+            compact && "h-[2lh]"
           )}
         />
       )}

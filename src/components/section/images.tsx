@@ -21,7 +21,6 @@ export const Images = () => (
           className="rounded-md aspect-video overflow-hidden w-56 md:w-96"
         >
           <Image
-            unoptimized
             width={1024}
             height={683}
             key={i}

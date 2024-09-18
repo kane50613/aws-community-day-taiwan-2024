@@ -107,7 +107,6 @@ export const SponsorImage: React.FC<SponsorImageProps> = ({ sponsor }) => (
     className="rounded-md aspect-[18/9] overflow-hidden flex items-center bg-white px-4"
   >
     <Image
-      unoptimized
       width={720}
       height={480}
       loading="lazy"

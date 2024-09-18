@@ -7,6 +7,9 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   poweredByHeader: false,
   output: "export",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default withNextIntl(nextConfig);

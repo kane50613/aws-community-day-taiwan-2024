@@ -12,7 +12,6 @@ export const ThemedLogo = () => {
       alt="AWS Community Day 2024"
       width={1068}
       height={390}
-      unoptimized
       className="h-8 md:h-12 w-auto"
     />
   );

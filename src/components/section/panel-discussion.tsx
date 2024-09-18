@@ -70,7 +70,6 @@ export const PanelDiscussion = () => {
                 <Image
                   src={speaker.image}
                   alt={speaker.name}
-                  unoptimized
                   className="object-cover aspect-square rounded-3xl border max-w-32 mb-2"
                 />
               )}
