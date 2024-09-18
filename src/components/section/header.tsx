@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button.tsx";
 import { ThemeToggle } from "@/components/theme-toggle.tsx";
 import { BlurIn } from "@/components/magicui/blur-in.tsx";
-import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "@/components/language-toggle.tsx";
 import { ThemedLogo } from "../themed-logo";
@@ -12,7 +11,7 @@ export const Header = () => {
 
   return (
     <BlurIn
-      component={m.header}
+      component="header"
       className="border-b bg-background sticky top-0 z-50"
       delay={0.3}
     >
@@ -28,7 +27,7 @@ export const Header = () => {
             track="SubmitApplication"
             download
           >
-            {t("register")}{" "}
+            {t("register")}
           </TrackAnchor>
         </Button>
       </div>

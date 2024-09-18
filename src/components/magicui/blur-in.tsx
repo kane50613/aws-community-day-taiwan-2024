@@ -2,15 +2,11 @@
 
 import { m, MotionProps } from "framer-motion";
 
-import { createElement, FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface BlurIntProps extends PropsWithChildren {
   // a motion component function
-  component?: FC<
-    MotionProps & {
-      className?: string;
-    }
-  >;
+  component?: keyof typeof m;
   className?: string;
   variant?: {
     hidden: { filter: string; opacity: number };
@@ -34,16 +30,22 @@ export const BlurIn = ({
   };
   const combinedVariants = variant || defaultVariants;
 
-  return createElement(
-    component || m.div,
-    {
-      initial: "hidden",
-      whileInView: "visible",
-      viewport: { once: true },
-      transition: { duration, delay },
-      variants: combinedVariants,
-      className,
-    },
-    children
+  const Comp = m[component || "div"] as FC<
+    MotionProps & {
+      className?: string;
+    }
+  >;
+
+  return (
+    <Comp
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration, delay }}
+      variants={combinedVariants}
+      className={className}
+    >
+      {children}
+    </Comp>
   );
 };

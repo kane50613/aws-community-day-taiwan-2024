@@ -1,5 +1,4 @@
 import { BlurIn } from "@/components/magicui/blur-in.tsx";
-import { m } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -134,7 +133,7 @@ export const SponsorTier: React.FC<SponsorTierProps> = ({
   return (
     <div>
       <BlurIn
-        component={m.h3}
+        component="h3"
         className="text-2xl font-display font-bold mt-10 mb-2 py-1.5 text-left"
       >
         {t(tier)}

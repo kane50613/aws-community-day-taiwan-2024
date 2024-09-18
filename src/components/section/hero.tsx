@@ -1,6 +1,5 @@
 import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import { ArrowRightIcon } from "lucide-react";
-import { m } from "framer-motion";
 import { Button } from "@/components/ui/button.tsx";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -19,20 +18,20 @@ export const Hero = () => {
           <Banner label={t("banner")} />
         </BlurIn>
         <BlurIn
-          component={m.h1}
+          component="h1"
           className="font-medium font-display text-center text-balance text-4xl tracking-[-0.02em] drop-shadow-sm md:text-7xl lg:text-8xl md:leading-[5rem] py-6"
         >
           {t("title")}
         </BlurIn>
         <BlurIn
-          component={m.span}
+          component="span"
           delay={0.15}
           className="text-lg md:text-xl text-foreground/75 text-center mb-6 text-balance"
         >
           {t("description")}
         </BlurIn>
         <BlurIn
-          component={m.span}
+          component="span"
           delay={0.15}
           className="text-lg md:text-xl text-foreground/90 text-center mb-12 text-balance"
         >
