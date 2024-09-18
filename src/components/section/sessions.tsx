@@ -42,7 +42,6 @@ export const Sessions = () => {
       time: "9:30 ~ 11:30",
       type: "Track A",
     },
-
     {
       title: (
         <>
