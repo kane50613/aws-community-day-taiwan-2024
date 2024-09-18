@@ -24,7 +24,7 @@ export const SessionTable = ({
 
   if (type === "Workshop")
     return (
-      <div>
+      <div className="flex flex-col gap-8">
         {sessions.map((session, index) => (
           <WorkshopSession session={session} key={index} />
         ))}
