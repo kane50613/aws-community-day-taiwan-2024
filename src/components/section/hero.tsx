@@ -2,7 +2,6 @@ import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button.tsx";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { Gradient } from "../gradient";
 import { Banner } from "../banner";
 import { TrackAnchor } from "../track-anchor";
