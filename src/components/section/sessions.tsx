@@ -10,7 +10,7 @@ export const Sessions = () => {
   const t = useTranslations("sessions");
 
   const sessions = [
-    ...getTrackASessions(t),
+    ...getTrackASessions(t, useTranslations("panelDiscussion")),
     ...trackBSessions,
     ...workshopSessions,
   ];

@@ -8,16 +8,23 @@ import LisaJia from "../../public/Lisa_Jia.jpg";
 import DannyChan from "../../public/Danny_Chan.jpg";
 
 export const getTrackASessions: (
-  t: ReturnType<typeof useTranslations>
-) => SessionType[] = (t) => [
+  sessionT: ReturnType<typeof useTranslations>,
+  panelDiscussionT: ReturnType<typeof useTranslations>
+) => SessionType[] = (sessionT, panelDiscussionT) => [
   {
-    title: t("keynoteAndPanel"),
+    title: sessionT("keynoteAndPanel"),
     speakers: [
       {
-        name: t("comingSoon"),
+        name: sessionT("comingSoon"),
       },
     ],
-    time: "9:30 ~ 11:30",
+    time: "9:30 ~ 10:30",
+    type: "Track A",
+  },
+  {
+    title: panelDiscussionT("title"),
+    speakers: [],
+    time: "10:35 ~ 11:40",
     type: "Track A",
   },
   {
@@ -40,7 +47,7 @@ export const getTrackASessions: (
         image: LisaJia,
       },
     ],
-    time: "15:40 ~ 16:20",
+    time: "12:10 ~ 12:50",
     type: "Track A",
     language: "Mandarin",
   },
@@ -59,7 +66,7 @@ export const getTrackASessions: (
     language: "English",
   },
   {
-    title: t("eric.bedrock.title"),
+    title: sessionT("eric.bedrock.title"),
     speakers: [
       {
         name: "Eric Ruan",
@@ -73,14 +80,14 @@ export const getTrackASessions: (
     language: "Mandarin",
   },
   {
-    title: "cdk-appsync-starter - An AWS AppSync Framework based on CDK",
+    title: "cdk-3factor-app: A 3factor app framework based on CDK",
     speakers: [
       {
         name: "Titan Lin",
         bio: "Taiwan",
       },
     ],
-    time: "12:10 ~ 12:50",
+    time: "14:50 ~ 15:30",
     type: "Track A",
     language: "Mandarin",
   },
@@ -100,11 +107,7 @@ export const getTrackASessions: (
   },
   {
     title: "Lightning Talks",
-    speakers: [
-      {
-        name: "",
-      },
-    ],
+    speakers: [],
     time: "16:30 ~ 17:00",
     type: "Track A",
   },
