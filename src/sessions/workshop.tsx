@@ -3,6 +3,8 @@ import YunaLin from "../../public/Yuan_Lin.jpg";
 import RichieLiu from "../../public/Richie_Liu.jpg";
 import HarryChung from "../../public/Harry_Chung.jpg";
 import ScottHsieh from "../../public/Scott_Hsieh.jpg";
+import NeilKuan from "../../public/NeilKuan.jpeg";
+import WynaTan from "../../public/WyneTan.jpg";
 import { SessionType } from "@/lib/session";
 
 const awsEducateAmbassador = [
@@ -34,11 +36,12 @@ const awsEducateAmbassador = [
 
 export const workshopSessions: SessionType[] = [
   {
-    time: "12:10 ~ 12:50",
-    title: "世界咖啡館",
+    time: "12:10 ~ 13:40",
+    title: "大使圓桌分享 (世界咖啡館)",
     type: "Workshop",
     language: "Mandarin",
-    speakers: awsEducateAmbassador,
+    description: "Powered by AWS Educate",
+    speakers: [],
   },
   {
     time: "13:50 ~ 16:20",
@@ -51,6 +54,24 @@ export const workshopSessions: SessionType[] = [
       en: "Learn to use SageMaker, from model selection, training, to deployment, and build a model hands-on! The model will be able to analyze quiz results and provide personalized feedback in a specific tone. Finally, integrate this model into the psychological testing platform built by AWS Educate Cloud Ambassadors! Turn AI creativity into practical applications.",
     },
     speakers: awsEducateAmbassador,
+  },
+  {
+    time: "12:10 ~ 14:30",
+    title: "AWS CDK 的 AI 之路：原來 Amazon Bedrock 可以這樣玩！",
+    type: "Workshop",
+    language: "Mandarin",
+    speakers: [
+      {
+        name: "Neil Kuan",
+        bio: "AWS Community Builder",
+        image: NeilKuan,
+      },
+      {
+        name: "Wyne Tan",
+        bio: "AWS Community Builder",
+        image: WynaTan,
+      },
+    ],
   },
   {
     time: "14:50 ~ 17:00",

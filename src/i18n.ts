@@ -98,7 +98,7 @@ export const messages = {
     sessions: {
       keynote: "主題演講",
       title: "議程",
-      heading: "更多議程，即將公開 - 敬請期待",
+      heading: "精彩議程，不容錯過",
       notAvailable: "目前尚無議程。",
       keynoteAndPanel: "主題演講與焦點論壇",
       comingSoon: "精彩議程 即將公開",

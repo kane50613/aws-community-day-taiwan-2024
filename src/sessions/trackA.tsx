@@ -12,12 +12,8 @@ export const getTrackASessions: (
   panelDiscussionT: ReturnType<typeof useTranslations>
 ) => SessionType[] = (sessionT, panelDiscussionT) => [
   {
-    title: sessionT("keynoteAndPanel"),
-    speakers: [
-      {
-        name: sessionT("comingSoon"),
-      },
-    ],
+    title: sessionT("keynote"),
+    speakers: [],
     time: "9:30 ~ 10:30",
     type: "Track A",
   },
