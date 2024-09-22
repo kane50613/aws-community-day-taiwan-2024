@@ -6,10 +6,12 @@ import EricRuan from "../../public/eric-ruan.webp";
 import ShunYoshie from "../../public/ShunYoshie.jpeg";
 import LisaJia from "../../public/Lisa_Jia.jpg";
 import DannyChan from "../../public/Danny_Chan.jpg";
+import TitanLin from "../../public/TitanLin.png";
+import SeanTai from "../../public/SeanTai.jpg";
 
 export const getTrackASessions: (
   sessionT: ReturnType<typeof useTranslations>,
-  panelDiscussionT: ReturnType<typeof useTranslations>
+  panelDiscussionT: ReturnType<typeof useTranslations>,
 ) => SessionType[] = (sessionT, panelDiscussionT) => [
   {
     title: sessionT("keynote"),
@@ -80,7 +82,13 @@ export const getTrackASessions: (
     speakers: [
       {
         name: "Titan Lin",
-        bio: "Taiwan",
+        bio: "AWS Community Builder, Taiwan",
+        image: TitanLin,
+      },
+      {
+        name: "Sean Tai",
+        bio: "Senior Engineer, momo.com, Taiwan",
+        image: SeanTai,
       },
     ],
     time: "14:50 ~ 15:30",

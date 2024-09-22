@@ -123,8 +123,8 @@ export const messages = {
     panelDiscussion: {
       title: "焦點論壇",
       heading: "破解焦慮世代：雲端、AI 與新世代人才的融合之路",
-      host: "主持人",
-      speaker: "演講者",
+      host: "主談人",
+      speaker: "與談人",
     },
     footer: {
       sponsor: {
