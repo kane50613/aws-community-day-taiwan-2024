@@ -64,12 +64,12 @@ export const trackBSessions: SessionType[] = [
     speakers: [
       {
         name: "Kimi Huang",
-        bio: "AUO Corporation / Principal Site Reliability Engineer",
+        bio: "AUO Corporation / Principal Site Reliability Engineer, Taiwan",
         image: KimiHuang,
       },
       {
         name: "Scott Hsieh",
-        bio: "104 Corporation / AWS Community Hero",
+        bio: "104 Corporation / AWS Community Hero, Taiwan",
         image: ScottHsieh,
       },
     ],
