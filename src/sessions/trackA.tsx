@@ -47,7 +47,7 @@ export const getTrackASessions: (
     ],
     time: "12:10 ~ 12:50",
     type: "Track A",
-    language: "Mandarin",
+    language: "English",
   },
   {
     title: "The Journey to localize AWS BuilderCards in Japan",
