@@ -60,6 +60,11 @@ export const messages = {
       host: "Host",
       speaker: "Speaker",
     },
+    volunteers: {
+      title: "Volunteers",
+      heading:
+        "One person's effort is addition, and one team's effort is multiplication",
+    },
     footer: {
       sponsor: {
         message: "Interested in sponsoring?",
@@ -126,6 +131,10 @@ export const messages = {
       host: "主談人",
       speaker: "與談人",
     },
+    volunteers: {
+      title: "志工",
+      heading: "一個人的努力是加法，一個團隊的努力才是乘法",
+    },
     footer: {
       sponsor: {
         message: "有興趣贊助嗎？",
@@ -191,6 +200,10 @@ export const messages = {
       heading: "不安な世代を解き明かす：クラウド、AI、新世代の人材が融合する道",
       host: "ホスト",
       speaker: "スピーカー",
+    },
+    volunteers: {
+      title: "ボランティア",
+      heading: "一人の努力は加算であり、チームの努力は乗算です",
     },
     footer: {
       sponsor: {

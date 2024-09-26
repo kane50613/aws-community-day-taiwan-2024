@@ -78,6 +78,18 @@ const sponsors: {
   ],
 };
 
+const personalSponsors = [
+  "洪昌逸",
+  "許榮倫",
+  "林家瑋 (Ray Lin), AWS Security Hero",
+  "楊致嘉",
+  "陳振峰",
+  "林承漢",
+  "Kevin Wang",
+  "許哲銘 Ming Xu",
+  "魏仲威",
+];
+
 export const Sponsors = () => {
   const t = useTranslations("sponsors");
 
@@ -88,8 +100,9 @@ export const Sponsors = () => {
       {Object.entries(sponsors).map(([tier, sponsorList], tierIndex) =>
         sponsorList.length ? (
           <SponsorTier key={tierIndex} tier={tier} sponsorList={sponsorList} />
-        ) : null
+        ) : null,
       )}
+      <PersonalSponsors />
     </div>
   );
 };
@@ -146,3 +159,21 @@ export const SponsorTier: React.FC<SponsorTierProps> = ({
     </div>
   );
 };
+
+export const PersonalSponsors = () => (
+  <div>
+    <BlurIn
+      component="h3"
+      className="text-2xl font-display font-bold mt-10 mb-2 py-1.5 text-left"
+    >
+      個人贊助
+    </BlurIn>
+    <div className="flex flex-wrap gap-x-8 gap-y-4 container">
+      {personalSponsors.map((sponsor, sponsorIndex) => (
+        <BlurIn key={sponsorIndex} delay={0.05 * sponsorIndex}>
+          {sponsor}
+        </BlurIn>
+      ))}
+    </div>
+  </div>
+);

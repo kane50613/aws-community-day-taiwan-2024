@@ -11,6 +11,7 @@ import { locales } from "@/i18n.ts";
 import { Metadata } from "next";
 import { Keynote } from "@/components/section/keynote.tsx";
 import { PanelDiscussion } from "@/components/section/panel-discussion.tsx";
+import { Volunteers } from "@/components/section/volunteers.tsx";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -33,7 +34,7 @@ export async function generateMetadata({
     description: `${t("description")}${t("date")}`,
     alternates: {
       canonical: new URL(
-        `https://awscmd.tw/${locale === "zh-Hant-Tw" ? "" : locale}`
+        `https://awscmd.tw/${locale === "zh-Hant-Tw" ? "" : locale}`,
       ),
     },
   } as Metadata;
@@ -61,6 +62,7 @@ export default function Page({
       <PanelDiscussion />
       <Sessions />
       <Sponsors />
+      <Volunteers />
       <Footer />
     </MotionLoader>
   );
