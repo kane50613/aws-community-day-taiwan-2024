@@ -15,6 +15,13 @@ interface KeynoteSpeakerProps {
 }
 const keynotes: KeynoteSpeakerProps[] = [
   {
+    title: "停止擔憂，擁抱 AWS 與社群：十年創業路上的技術演進之旅",
+    speaker: "李致緯 Richard Lee",
+    bio: "TNL Mediagene 技術長",
+    image: Richard,
+    gridColumn: 2,
+  },
+  {
     title: "AI的過去現在未來",
     speaker: "黄浩文 (Haowen HUANG)",
     bio: "AI & Machine Learning Specialist, Developer Relations@AWS",
@@ -27,13 +34,6 @@ const keynotes: KeynoteSpeakerProps[] = [
     bio: "1111人力銀行 技術長",
     image: YoungChang,
     gridColumn: 1,
-  },
-  {
-    title: "停止擔憂，擁抱 AWS 與社群：十年創業路上的技術演進之旅",
-    speaker: "李致緯 Richard Lee",
-    bio: "TNL Mediagene 技術長",
-    image: Richard,
-    gridColumn: 2,
   },
 ];
 
