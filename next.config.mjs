@@ -10,6 +10,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: "/2024"
 };
 
 export default withNextIntl(nextConfig);
