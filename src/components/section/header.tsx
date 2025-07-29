@@ -4,7 +4,6 @@ import { BlurIn } from "@/components/magicui/blur-in.tsx";
 import { useTranslations } from "next-intl";
 import { LanguageToggle } from "@/components/language-toggle.tsx";
 import { ThemedLogo } from "../themed-logo";
-import { TrackAnchor } from "../track-anchor";
 
 export const Header = () => {
   const t = useTranslations("header");
@@ -21,14 +20,9 @@ export const Header = () => {
         <LanguageToggle />
         <ThemeToggle />
         <Button variant="secondary" className="ml-2" asChild>
-          <TrackAnchor
-            href="https://tw.events.awsug.net/events/aws-community-day-2024"
-            target="_blank"
-            track="SubmitApplication"
-            download
-          >
+          <a href="https://awscmd.tw/?show_register_dialog=true">
             {t("register")}
-          </TrackAnchor>
+          </a>
         </Button>
       </div>
     </BlurIn>

@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button.tsx";
 import { useTranslations } from "next-intl";
 import { Gradient } from "../gradient";
 import { Banner } from "../banner";
-import { TrackAnchor } from "../track-anchor";
 
 export const Hero = () => {
   const t = useTranslations("hero");
@@ -45,15 +44,10 @@ export const Hero = () => {
         </BlurIn>
         <BlurIn delay={0.45}>
           <Button className="rounded-full px-6" asChild>
-            <TrackAnchor
-              href="https://tw.events.awsug.net/events/aws-community-day-2024"
-              target="_blank"
-              download
-              track="SubmitApplication"
-            >
+            <a href="https://awscmd.tw/?show_register_dialog=true">
               {t("register")}
               <ArrowRightIcon className="w-4 ml-2" />
-            </TrackAnchor>
+            </a>
           </Button>
         </BlurIn>
       </div>
