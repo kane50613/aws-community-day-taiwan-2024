@@ -15,4 +15,4 @@ aws s3 rm s3://awscmd.tw-migration/2024/jp.html
 aws s3 cp s3://awscmd.tw-migration/2024/en.html s3://awscmd.tw-migration/2024/en --content-type "text/html" --metadata-directive "REPLACE"
 aws s3 rm s3://awscmd.tw-migration/2024/en.html
 echo "Invalidating CloudFront..."
-aws cloudfront create-invalidation --distribution-id E2FYOFED7YP5FT --paths "/2024" "/en" "/jp"
+aws cloudfront create-invalidation --distribution-id E2FYOFED7YP5FT --paths "/2024" "/2024/en" "/2024/jp"
